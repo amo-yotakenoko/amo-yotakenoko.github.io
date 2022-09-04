@@ -1,7 +1,7 @@
 body {
    background-color:#c1da74;	 
   /* background-color:#49313c;	  */
-
+ 	font-family: 'Agency FB';
 }
 
 
@@ -22,6 +22,23 @@ body {
 
 
   }
+
+  .content {
+
+
+   
+     background-color:    #fd5151;
+    border-radius: 5px;
+ 
+   /* margin-top: 12px; */
+    margin-right: 32px;
+    /* margin-bottom: 12px; */
+    margin-left: 32px;
+ 
+ 
+
+
+  }
   
 
 
@@ -38,3 +55,10 @@ body {
 
   }
 
+main {
+    display: block;		/*IE用*/
+    margin: 100px 100px;	/*上下、左右へのブロックの外側へ空けるスペース*/
+}
+.cover {
+    object-fit: cover;
+}
