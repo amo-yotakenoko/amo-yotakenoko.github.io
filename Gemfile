@@ -1,4 +1,4 @@
-#bundle exec jekyll serve これでgemfileが治るはず
+#bundle exec jekyll serve これでgemfileが治るはず　WSLで行かないとダメ?
 
 source "https://rubygems.org"
 # Hello! This is where you manage which Jekyll version is used to run.
