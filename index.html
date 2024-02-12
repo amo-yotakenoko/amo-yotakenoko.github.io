@@ -16,60 +16,68 @@
 <body>
 
     <div class="container">
-        <div class="row no-gutters">
-            <div class="col-md-6">
+
+        <div class="row no-gutters ">
+            <div class="col-12 title">
+                <h1>Application</h1>
+            </div>
+            <div class="col-lg-6 col-12">
                 <div class="card">
                     <img src="images/thumbnail/3Dbeads.png" id="3Dbeads" class="card-img-top thumbnail">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6 col-12">
                 <div class="card">
                     <img src="images/thumbnail/colorSeggester.png" id="colorSeggester" class="card-img-top thumbnail">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6 col-12">
                 <div class="card">
                     <img src="images/thumbnail/virtualrobot.png" id="virtualrobot" class="card-img-top thumbnail">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6 col-12">
                 <div class="card">
                     <img src="images/thumbnail/pomo-yo.png" id="pomo-yo" class="card-img-top thumbnail">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6 col-12">
                 <div class="card">
                     <img src="images/thumbnail/amo-yo.png" id="amo-yo" class="card-img-top thumbnail">
                 </div>
             </div>
 
+
             <div class="row no-gutters">
-                <div class="col-md-4">
+                <div class="col-12 title">
+                    <h1>3Dmodel</h1>
+                </div>
+                <div class="col-lg-4 col-6">
                     <div class="card">
                         <img src="images/thumbnail/256fes2.png" id="256fes2" class="card-img-top thumbnail">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-6">
                     <div class="card">
                         <img src="images/thumbnail/256trolly.png" id="256trolly" class="card-img-top thumbnail">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-6">
                     <div class="card">
                         <img src="images/thumbnail/shinomorivr.png" id="shinomorivr" class="card-img-top thumbnail">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-6">
                     <div class="card">
                         <img src="images/thumbnail/256fes.png" id="256fes" class="card-img-top thumbnail">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-6">
                     <div class="card">
                         <img src="images/thumbnail/asio15.png" id="asio15" class="card-img-top thumbnail">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-6">
                     <div class="card">
                         <img src="images/thumbnail/asiopapercraft.png" id="asiopapercraft"
                             class="card-img-top thumbnail">
@@ -96,7 +104,7 @@
                         content = content.next();
                         console.log("となり");
                     }
-                    $('<div class="col-md-12 aboutTab"></div>').load(`abouts.html #${aboutId}`, function (response, status, xhr) {
+                    $('<div class="col-12 aboutTab"></div>').load(`abouts.html #${aboutId}`, function (response, status, xhr) {
                         if (status == "error") {
                             var msg = "Error loading content: ";
                             console.log(msg + xhr.status + " " + xhr.statusText);
