@@ -1,0 +1,87 @@
+
+body{
+    background-color: rgb(139, 206, 137)
+}
+
+h1{
+    color:brown;
+       font-family:'Agency FB', sans-serif;
+       
+}
+h3{
+    color:brown;
+       font-family:'Agency FB', sans-serif;
+}
+.title{
+    border-style: none none dotted none;
+}
+
+@import url('https://fonts.cdnfonts.com/css/agency-fb');
+  .agency-font {
+           font-family: 'Agency FB', sans-serif;
+        }
+     
+    .item{
+        background: #0bd;
+        /* margin:10px;
+        padding:10px;  /* margin:10px;
+        padding:10px; */
+    }
+    .card{
+        margin: 1%;
+    }
+    .container{
+        display:flex;
+        flex-wrap: wrap;
+        
+    }
+ .thumbnail {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    /* width: 100%; */
+
+    /* padding-top: 56.25%;  */
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+.card-img-top.thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit:cover;
+    aspect-ratio: 16/9;
+}
+
+    .thumbnail:hover {
+        opacity: 0.7;
+    }
+
+
+  li{
+	list-style-position: inside;
+}
+
+
+
+    .video {
+  width: 100%; 
+  height: auto; 
+}
+
+.aboutTab{
+    background-color: #f1eac3;
+      display: none;
+     padding:10px;
+  
+}
+
+.aboutTab.active {
+  display: block;
+}
+
+.moreButton{
+
+position: absolute; 
+bottom: 10px; 
+right: 10px;
+}
