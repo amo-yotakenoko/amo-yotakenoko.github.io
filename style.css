@@ -3,7 +3,7 @@ body{
     background-color: rgb(139, 206, 137)
 }
 
-h1{
+/* h1{
     color:brown;
        font-family:'Agency FB', sans-serif;
        
@@ -11,9 +11,12 @@ h1{
 h3{
     color:brown;
        font-family:'Agency FB', sans-serif;
-}
+} */
 .title{
+     color:brown;
+       font-family:'Agency FB', sans-serif;
     border-style: none none dotted none;
+     text-align: center;
 }
 
 @import url('https://fonts.cdnfonts.com/css/agency-fb');
@@ -84,4 +87,18 @@ h3{
 position: absolute; 
 bottom: 10px; 
 right: 10px;
+}
+
+
+
+.content {
+    background-color: #FDF251;
+    border-radius: 5px;
+    color: #728356;
+    /* padding: 10px; */
+    font-weight: bolder;
+    /* margin: 5px;  */
+}
+  .day {
+    text-align: right;
 }

@@ -17,3 +17,48 @@
 </body>
 
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <style>
+        /* スライドショーのスタイル */
+        .slick-slide img {
+            width: 100%;
+        }
+    </style> -->
+</head>
+
+
+<!-- 画像スライド用の要素 -->
+<div class="slider">
+    <div><img src="images/pomo_yo_description/1.jpeg"></div>
+    <div><img src="images/pomo_yo_description/2.jpeg"></div>
+    <div><img src="images/pomo_yo_description/3.jpeg"></div>
+    <div><img src="images/pomo_yo_description/4.jpeg"></div>
+</div>
+<style>
+    .slider img {
+        width: 100%;
+    }
+</style>
+<!-- JQueryとSlickの初期化スクリプト -->
+<script>
+    $(document).ready(function () {
+        $('.slider').slick({
+
+            dots: true // ドットナビゲーションの表示
+        });
+    });
+</script>
