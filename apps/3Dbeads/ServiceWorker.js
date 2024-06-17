@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-iron beads-1.0.2";
 const contentToCache = [
-    "Build/3Dbeads.loader.js",
-    "Build/3Dbeads.framework.js",
-    "Build/3Dbeads.data",
-    "Build/3Dbeads.wasm",
+    "Build/build.loader.js",
+    "Build/build.framework.js",
+    "Build/build.data",
+    "Build/build.wasm",
     "TemplateData/style.css"
 
 ];
