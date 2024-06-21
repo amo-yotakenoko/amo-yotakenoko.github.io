@@ -1,9 +1,9 @@
 function createPDF(savedataJson) {
     console.log(`${savedataJson}`);
-    const savedataObject = JSON.parse(savedataJson);
-    savedataObject.material.forEach(item => {
-        console.log(item.c);
-    });
+    // const savedataObject = JSON.parse(savedataJson);
+    // savedataObject.material.forEach(item => {
+    //     console.log(item.c);
+    // });
     // jsPDFのインポート
     const { jsPDF } = window.jspdf;
 
@@ -18,6 +18,7 @@ function createPDF(savedataJson) {
     // 各パターンを描画する関数を呼び出す
     let gridsize = 29;
     let hexsize = 16;
+     let circlesize = 16;
     let offsetX = 0;
 
     offsetX = (pageWidth - gridsize * pitch) / 2;
@@ -29,8 +30,17 @@ function createPDF(savedataJson) {
     drawHexPattern(doc, offsetX, offsetY, pitch, hexsize);
     offsetY += (pitch * (gridsize + 3)) * Math.sin(60 * Math.PI / 180);
 
-    drawHexPattern(doc, offsetX, offsetY, pitch, hexsize);
-    offsetY += (pitch * (gridsize + 3)) * Math.sin(60 * Math.PI / 180);
+    
+  offsetY += pitch* circlesize;
+        offsetX = (pageWidth ) / 2;
+    drawCirclePattern(doc, offsetX, offsetY, pitch, circlesize);
+    offsetY += pitch * circlesize;
+    
+     offsetY += pitch* circlesize;
+        offsetX = (pageWidth ) / 2;
+    drawCirclePattern(doc, offsetX, offsetY, pitch, circlesize);
+    offsetY += pitch* circlesize;
+
 
 
     const x = 10;
@@ -68,6 +78,21 @@ function drawGridPattern(doc, offsetX, offsetY, pitch, size) {
         for (let y = 0; y < size; y++) {
             const circleX = offsetX + x * pitch;
             const circleY = offsetY + y * pitch;
+            doc.setDrawColor(128);
+            doc.circle(circleX, circleY, pitch / 2, 'D');
+            doc.setFontSize(5);
+        }
+    }
+}
+
+function drawCirclePattern(doc, offsetX, offsetY, pitch, size) {
+    for (let r = 0; r < size; r++) {
+        for (let theta = 0; theta  < r * 6; theta++) {
+              const radian = theta*360/(r*6) * (Math.PI / 180);
+        
+    
+            const circleX = offsetX + Math.cos(radian)*r * pitch;
+            const circleY = offsetY + Math.sin(radian)*r * pitch;
             doc.setDrawColor(128);
             doc.circle(circleX, circleY, pitch / 2, 'D');
             doc.setFontSize(5);
