@@ -88,14 +88,10 @@ function createPDF(savedataJson) {
 
 
 
-
     if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase())) {
-
-        doc.save("3Dbeads");
+        window.open(doc.output('bloburl', { filename: "3Dbeads" }))
     } else {
-        const pdfBlob = doc.output('blob', { filename: "3Dbeads" });
-        const url = URL.createObjectURL(pdfBlob);
-        window.open(url);
+        doc.save("3Dbeads")
     }
 
 }
