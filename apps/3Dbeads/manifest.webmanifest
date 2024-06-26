@@ -2,8 +2,9 @@
   "name": "iron beads",
   "short_name": "iron beads",
   "start_url": "index.html",
-  // "display": "fullscreen",
+  "display": "fullscreen",
   "background_color": "#231F20",
+  "orientation": "landscape",
   "theme_color": "#000",
   "description": "ironbeads_3D",
   "icons": [
