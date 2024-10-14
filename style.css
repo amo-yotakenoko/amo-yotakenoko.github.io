@@ -119,6 +119,13 @@ li {
   right: 10px;
 }
 
+.tryButton {
+
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+}
+
 
 
 .content {
