@@ -1,110 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-<head>
-    <meta charset="UTF-8">
-    <title>takenoko</title>
-    <meta name="description" content="takenoko">
+layout: page
+---
 
-    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+<!-- <body background="images/pomo-yo_icon.jpeg"> -->
+<link rel="stylesheet" type="text/css" href="my_css.css">
+<p class="heading"><img src="images/pomo-yo_icon.jpeg" width=" 64px">PONPON模様<br><span
+        style="font-size : 18pt">ぽんぽん巻き図制作支援アプリ<span>
+            <p>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- Slick CDN -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="row">
-
-            <!-- <body background="images/takenoko.gif"> -->
-            <div class="title col-12">
-                <img src="images/pomo-yo_icon.png" width=" 250ex">
-                <h1>
-
-                    PONPON模様
-                </h1>
-
-                <h3>ぽんぽん巻き図制作支援アプリ</h3>
-            </div>
-
-            <p class="content col-12">
-                PONPON模様はぽんぽんの巻き図を簡単に作ることのできるアプリです
-                一般の本では既存の巻き図しか載っておらずオリジナルのぽんぽんを作ることは困難ですが、このアプリはオリジナルのぽんぽんを誰でも簡単に作ることができます。<br>
-                <a href=" https://www.wiss.org/WISS2020Proceedings/data/N-09.pdf">「WISS 2020:
+            <p class="text">
+                PONPON模様はぽんぽんの巻き図を簡単に作ることのできるアプリです<br>一般の本では既存の巻き図しか載っておらずオリジナルのぽんぽんを作ることは困難ですが、このアプリはオリジナルのぽんぽんを誰でも簡単に作ることができます。
+                <br><a href=" https://www.wiss.org/WISS2020Proceedings/data/N-09.pdf">「WISS 2020:
                     第28回インタラクティブシステムとソフトウェアに関するワークショップ」に論文を投稿し萌芽発表賞をいただきました</a>
             </p>
-            <div class="content col-12">
-                <div class="slider">
-                    <div><img src="images/pomo_yo_description/1.jpeg"></div>
-                    <div><img src="images/pomo_yo_description/2.jpeg"></div>
-                    <div><img src="images/pomo_yo_description/3.jpeg"></div>
-                    <div><img src="images/pomo_yo_description/4.jpeg"></div>
-                </div>
-                <style>
-                    .slider {
-                        width: 100%;
-                        /* 親要素の幅いっぱいに広げる */
-                        max-width: 800px;
-                        /* 必要に応じて適切な最大幅を設定 */
-                        margin: 0 auto;
-                        /* 中央寄せ */
-                        /* overflow: hidden; */
-                        /* オーバーフローを制御 */
-                    }
 
-                    .slider div {
-                        width: 100%;
-                        /* 親要素の幅いっぱいに広げる */
-                    }
+            <img src="images/pomo_yo_description/1.jpeg">
+            <img src="images/pomo_yo_description/2.jpeg">
+            <img src="images/pomo_yo_description/3.jpeg">
+            <img src="images/pomo_yo_description/4.jpeg">
+            <br>
 
-                    .slider img {
-                        width: 100%;
-                        /* 画像を親要素の幅いっぱいに広げる */
-                        height: auto;
-                        /* アスペクト比を維持するため、高さを自動調整 */
-                    }
 
-                    .slick-prev:before {
-                        color: brown;
-                        /* width: 100px; */
-                    }
 
-                    .slick-next:before {
-                        color: brown;
-                        /* width: 100px; */
-                    }
-                </style>
-                <!-- JQueryとSlickの初期化スクリプト -->
-                <script>
-                    $(document).ready(function () {
-                        $('.slider').slick({
 
-                            dots: true, // ドットナビゲーションの表示
-                            arrows: true // 矢印ナビゲーションの表示
-                        });
-                    });
-                </script>
-            </div>
+            <a href='https://play.google.com/store/apps/details?id=com.takenoko'><img alt='Google Play で手に入れよう'
+                    src='https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.jpeg'
+                    width="155" ; style='margin-top:-32px;' /></a>
 
-            <div class="content col-12">
-                AppStore、GooglePlayで公開していたのですがApple Developer Program(年間$99)や頻繁に更新されるポリシーにうんざりしたため暫定的にWebGLに移植しました。<br>
-                <a class="btn btn-success"
-                    href="https://amo-yotakenoko.github.io/pomo-yoWebGL/">WebGL版(PC非対応)<br>多分動きます</a>
-            </div>
-        </div>
-</body>
+            <a class="btn btn-success"
+                href="https://amo-yotakenoko.github.io/pomo-yoWebGL/">WebGL版(PC非対応)<br>iOSでも動きます</a>
+
+            <!-- <a href="https://apps.apple.com/jp/app/ponpon%E6%A8%A1%E6%A7%98/id1511383020"
+                style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2019-10-28&kind=iossoftware&bubble=apple_music) no-repeat;width:135px;height:40px;"></a> -->
+
+            <!-- <p class="text">Android版は少々お待ちください</p> -->
+            <!-- <a href=" https://amo-yotakenoko.github.io/pomo-yo_site/">β版テストリンク<a> -->

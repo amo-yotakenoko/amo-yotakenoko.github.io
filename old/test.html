@@ -1,21 +1,64 @@
-<!doctype html>
-<html lang="ja">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>takenoko</title>
-    <meta name="description" content="takenoko">
-    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.cdnfonts.com/css/jolly-dream-2" rel="stylesheet">
+
+    <style>
+        /* Agency FBフォントを使用するクラスに適用 */
+        .agency-font {
+            font-family: 'Agency FB', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="col-12 agency-font" style="font-family: 'Jolly Dream', sans-serif;">
-        <h1>Application</h1>
-    </div>
-
+    <!-- テキストをAgency FBフォントで表示 -->
+    <p class="agency-font">This is an example text in Agency FB font.</p>
 </body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <style>
+        /* スライドショーのスタイル */
+        .slick-slide img {
+            width: 100%;
+        }
+    </style> -->
+</head>
+
+
+<!-- 画像スライド用の要素 -->
+<div class="slider">
+    <div><img src="images/pomo_yo_description/1.jpeg"></div>
+    <div><img src="images/pomo_yo_description/2.jpeg"></div>
+    <div><img src="images/pomo_yo_description/3.jpeg"></div>
+    <div><img src="images/pomo_yo_description/4.jpeg"></div>
+</div>
+<style>
+    .slider img {
+        width: 100%;
+    }
+</style>
+<!-- JQueryとSlickの初期化スクリプト -->
+<script>
+    $(document).ready(function () {
+        $('.slider').slick({
+
+            dots: true // ドットナビゲーションの表示
+        });
+    });
+</script>
