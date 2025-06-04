@@ -1,0 +1,6 @@
+wslで実行
+git checkout react-migration 
+
+
+cd portfolcdcd
+npm run dev

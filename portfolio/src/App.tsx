@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Thumbnail from "./Thumbnail";
 function App() {
-  var miniThumbnailCol = { xs: 6, md: 4, lg: 3 };
+  var miniThumbnailCol = { xs: 12, md: 4, lg: 4 };
   return (
     <>
       <Container>
