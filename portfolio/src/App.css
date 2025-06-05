@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(139, 206, 137)
+  background-color: rgb(139, 206, 137);
 }
 
 /* h1{
@@ -14,13 +14,12 @@ h3{
 /* @import url('https://fonts.cdnfonts.com/css/agency-fb'); */
 
 @font-face {
-  font-family: 'agency_fb';
+  font-family: "agency_fb";
   font-style: normal;
   font-weight: 400;
-  src: local('agency_fb'), url('https://fonts.cdnfonts.com/s/13829/agency_fb.woff') format('woff');
+  src: local("agency_fb"),
+    url("https://fonts.cdnfonts.com/s/13829/agency_fb.woff") format("woff");
 }
-
-
 
 .name {
   font-family: "DotGothic16", sans-serif;
@@ -37,17 +36,15 @@ h3{
   /* flex: 2; */
 }
 
-
 .title {
   color: brown;
-  font-family: 'agency_fb', sans-serif;
+  font-family: "agency_fb", sans-serif;
   border-style: none none dotted none;
   text-align: center;
 }
 
-
 .agency-font {
-  font-family: 'agency_fb', sans-serif;
+  font-family: "agency_fb", sans-serif;
 }
 
 .item {
@@ -57,12 +54,9 @@ h3{
         padding:10px; */
 }
 
-
-
 .container {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .thumbnail {
@@ -76,7 +70,16 @@ h3{
   width: 100%;
   height: 100%;
   border: none;
-  box-shadow: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 初期影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* z-index 有効化のため */
+  z-index: 0;
+}
+
+.card:hover {
+  transform: translateY(-6px); /* 上に浮かせる */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* 少し深めの影に変化 */
+  z-index: 10; /* 他のカードより上に */
 }
 
 .card-img-top.thumbnail {
@@ -86,16 +89,13 @@ h3{
   aspect-ratio: 16/9;
 }
 
-.thumbnail:hover {
+/* .thumbnail:hover {
   opacity: 0.7;
-}
-
+} */
 
 li {
   list-style-position: inside;
 }
-
-
 
 .video {
   width: 100%;
@@ -106,7 +106,6 @@ li {
   background-color: #f1eac3;
   display: none;
   padding: 10px;
-
 }
 
 .aboutTab.active {
@@ -114,23 +113,19 @@ li {
 }
 
 .moreButton {
-
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
 
 .tryButton {
-
   position: absolute;
   bottom: 50px;
   right: 10px;
 }
 
-
-
 .content {
-  background-color: #FDF251;
+  background-color: #fdf251;
   border-radius: 5px;
   color: #728356;
   /* padding: 10px; */
