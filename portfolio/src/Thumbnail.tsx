@@ -1,17 +1,14 @@
 import React, { Children, useState } from "react";
 import { Container, Row, Col, Collapse } from "react-bootstrap";
+import type { colSize } from "./useBootstrapBreakpoint";
 type ThumbnailProps = {
   id: string;
   src: string;
   alt?: string;
   className?: string;
-  colSize?: {
-    xs?: number;
-    sm?: number;
-    md?: number;
-    lg?: number;
-    xl?: number;
-  };
+  colSize?: colSize;
+  selectedName?: string;
+  setSelectedName?: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const Thumbnail: React.FC<ThumbnailProps> = ({
@@ -20,33 +17,29 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
   alt,
   className,
   colSize = { xs: 12, md: 12, lg: 6 },
+  selectedName,
+  setSelectedName,
 }) => {
-  const [open, setOpen] = useState(false);
   return (
     <>
       <Col {...colSize}>
         <div className={className ?? ""}>
-          <div
-            className="card"
-            onClick={() => setOpen(!open)}
-            style={{ cursor: "pointer" }}
-          >
+          <div className={"card "} style={{ cursor: "pointer" }}>
             <img
               src={src}
               id={id}
               alt={alt ?? id}
-              className="card-img-top thumbnail"
+              className={
+                "card-img-top thumbnail " +
+                (selectedName === id ? "selected-thumbnail" : "")
+              }
+              onClick={() => setSelectedName?.(id)}
             />
           </div>
         </div>
       </Col>
-      <Collapse in={open}>
-        <div className="mt-2">
-          <div className="p-2 bg-light">詳細内容をここに記述</div>
-        </div>
-      </Collapse>
     </>
   );
 };
-
 export default Thumbnail;
+export type { ThumbnailProps };

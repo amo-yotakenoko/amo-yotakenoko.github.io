@@ -66,6 +66,10 @@ h3{
   /* お好みで */
 }
 
+.selected-thumbnail {
+  border: 4px solid #007bff; /* 好きな色と太さに変更可能 */
+}
+
 .card {
   width: 100%;
   height: 100%;
