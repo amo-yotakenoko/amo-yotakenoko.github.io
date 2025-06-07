@@ -1,7 +1,7 @@
 import { Col, Row } from "react-bootstrap";
 import Thumbnail from "./Thumbnail";
 import type { ThumbnailProps } from "./Thumbnail";
-import useBootstrapBreakpoint from "./useBootstrapBreakpoint";
+import useBootstrapWidth from "./useBootstrapWidth";
 
 type SectionProps = {
   title: string;
@@ -16,25 +16,58 @@ export default function ThumbnailSection({
   items,
   selectedName,
   setSelectedName,
-  colSize = { xs: 12, md: 6, lg: 4, xl: 3 },
+  colSize = {
+    xs: 12,
+    sm: 12,
+    md: 6,
+    lg: 6,
+    xl: 6,
+    xxl: 6,
+  },
 }: SectionProps) {
-  const breakpoint = useBootstrapBreakpoint(colSize);
+  const breakpoint = useBootstrapWidth(colSize);
+
+  const renderedItems: React.ReactNode[] = [];
+
+  const contentQueue: React.ReactNode[] = [];
+
+  for (let index = 0; index < items.length; index++) {
+    const item = items[index];
+
+    renderedItems.push(
+      <Thumbnail
+        {...item}
+        colSize={colSize}
+        selectedName={selectedName}
+        setSelectedName={setSelectedName}
+      />
+    );
+    contentQueue.push(
+      <>
+        <Col xs={12} key={`divider-${index}`}>
+          {item.id}
+        </Col>
+      </>
+    );
+
+    // 区切り挿入条件（指定数ごと、または最後）
+    if ((index + 1) % (12 / breakpoint) === 0 || index === items.length - 1) {
+      while (contentQueue.length > 0) {
+        renderedItems.push(contentQueue.shift());
+      }
+    }
+  }
+
   return (
     <Row className="g-0 mb-4">
       <Col xs={12} className="title mb-2">
-        <h1>{title}</h1>
+        <h1>
+          {title}
+          {12 / breakpoint}
+        </h1>
       </Col>
-      {items.map((item) => (
-        <>
-          <Thumbnail
-            key={item.id}
-            {...item}
-            colSize={colSize}
-            selectedName={selectedName}
-            setSelectedName={setSelectedName}
-          />
-          {breakpoint}
-        </>
+      {renderedItems.map((item) => (
+        <>{item}</>
       ))}
     </Row>
   );

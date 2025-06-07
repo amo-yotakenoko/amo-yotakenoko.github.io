@@ -4,10 +4,17 @@ import "./App.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Thumbnail from "./Thumbnail";
-import { useBootstrapBreakpoint } from "./useBootstrapBreakpoint";
+
 import ThumbnailSection from "./ThumbnailsSection";
 function App() {
-  var miniThumbnailCol = { xs: 12, md: 4, lg: 4 };
+  var miniThumbnailCol = {
+    xs: 12,
+    sm: 12,
+    md: 4,
+    lg: 4,
+    xl: 4,
+    xxl: 4,
+  };
   // var miniThumbnailCol = { xs: 12, md: 12, lg: 6 };
   const applications = [
     { id: "sotuken", src: "/thumbnail/sotuken.jpg", alt: "卒研" },

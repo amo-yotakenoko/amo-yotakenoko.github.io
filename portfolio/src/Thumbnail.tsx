@@ -1,6 +1,6 @@
 import React, { Children, useState } from "react";
 import { Container, Row, Col, Collapse } from "react-bootstrap";
-import type { colSize } from "./useBootstrapBreakpoint";
+import type { colSize } from "./useBootstrapWidth";
 type ThumbnailProps = {
   id: string;
   src: string;

@@ -6,9 +6,10 @@ export type colSize = {
   md?: number;
   lg?: number;
   xl?: number;
+  xxl?: number;
 };
 
-function useBootstrapBreakpoint(colSize: colSize) {
+function useBootstrapWidth(colSize: colSize) {
   //   const [breakpoint, setBreakpoint] = useState("xs");
 
   //   const updateBreakpoint = () => {
@@ -29,7 +30,7 @@ function useBootstrapBreakpoint(colSize: colSize) {
     else if (width < 992) setNowcolSize(colSize.md ?? 1);
     else if (width < 1200) setNowcolSize(colSize.lg ?? 1);
     else if (width < 1400) setNowcolSize(colSize.xl ?? 1);
-    else setNowcolSize(12);
+    else setNowcolSize(colSize.xxl ?? 1);
   };
 
   useEffect(() => {
@@ -41,5 +42,5 @@ function useBootstrapBreakpoint(colSize: colSize) {
   return nowcolSize;
 }
 
-export { useBootstrapBreakpoint };
-export default useBootstrapBreakpoint;
+export { useBootstrapWidth as useBootstrapBreakpoint };
+export default useBootstrapWidth;
