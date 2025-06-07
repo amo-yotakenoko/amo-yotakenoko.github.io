@@ -125,54 +125,40 @@ export const ThreeDBeadsAbout = () => {
 
 export const VirtualRobot = () => {
   return (
-    <Container>
-      <Row>
+    <Container className="py-5">
+      {/* タイトル＋紹介文 */}
+      <Row className="align-items-center mb-4">
         <Col lg={6} xs={12}>
-          <div className="title">
-            <h1>VirtualRobot</h1>
-          </div>
+          <h1 className="mb-3">VirtualRobot</h1>
           <p>
             「VirtualRobot」は自分でロボットを設計しプログラムを書くことでミッションを攻略するゲームです。
             ミッションをクリアするごとに使えるパーツが増えていき、それぞれ目的の違う12+2のミッションをクリアすることが目標で、制限のうちで攻略すると追加でスターが集められるやりこみ要素もあります。
           </p>
-          <ul>
-            {/* <li>Unityユースクリエイターカップ2022においてチャレンジ賞を頂きました。</li>
-          <li>ゲームクリエイター甲子園 2022でU-18部門 総合賞 佳作を頂き実況していただきました。</li> */}
-          </ul>
         </Col>
         <Col lg={6} xs={12}>
           <YouTube
-            videoUrl="https://www.youtube.com/embed/5CGP4YijZ6k?autoplay=1&mute=1"
+            videoUrl="https://www.youtube.com/embed/5CGP4YijZ6k"
             autoplay={true}
           />
         </Col>
       </Row>
 
-      <Row className="mb-3">
+      {/* 表彰動画 */}
+      <Row className="mb-4">
         <Col xs={12}>
-          <p>
+          <p className="mb-3">
             ゲームクリエイター甲子園 2022でU-18部門 総合賞
             佳作を頂き実況していただきました。
           </p>
-          <div className="d-flex flex-wrap gap-3 justify-content-center">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/lR0mVyNdVUs?start=2050"
-              title="実況動画1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/aD1M5IysgzQ"
-              title="実況動画2"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-          <p className="mt-2">
+        </Col>
+        <Col lg={6} xs={12} className="mb-3 mb-lg-0">
+          <YouTube videoUrl="https://www.youtube.com/embed/lR0mVyNdVUs?start=2050" />
+        </Col>
+        <Col lg={6} xs={12}>
+          <YouTube videoUrl="https://www.youtube.com/embed/aD1M5IysgzQ" />
+        </Col>
+        <Col xs={12}>
+          <p className="mt-3">
             <a
               href="https://gck-prod-uploads.s3.ap-northeast-1.amazonaws.com/pdfs/97a21aa7-e6eb-4303-b978-e3b07880f748.pdf"
               target="_blank"
@@ -185,19 +171,23 @@ export const VirtualRobot = () => {
         </Col>
       </Row>
 
-      <Row className="mb-3">
+      {/* ブログ紹介 */}
+      <Row className="mb-4">
         <Col xs={12}>
-          <a
-            href="https://www.chickensblog.com/virtual-robot-2021/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            チキンズブログ様にワークショップイベントを行った様子を紹介していただきました。
-          </a>
+          <p>
+            <a
+              href="https://www.chickensblog.com/virtual-robot-2021/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              チキンズブログ様にワークショップイベントを行った様子を紹介していただきました。
+            </a>
+          </p>
           <div className="day">2022/4/7</div>
         </Col>
       </Row>
 
+      {/* 詳しく見るボタン */}
       <Row>
         <Col xs={12} className="text-center">
           <Button

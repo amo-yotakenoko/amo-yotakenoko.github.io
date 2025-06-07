@@ -5,6 +5,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Thumbnail from "./Thumbnail";
 import * as Application from "./page/Application";
+import * as Model from "./page/Model";
+import * as Hardware from "./page/Hardware";
 
 import ThumbnailSection from "./ThumbnailsSection";
 function App() {
@@ -64,29 +66,100 @@ function App() {
   ];
 
   const models = [
-    { id: "hirumasika", src: "/thumbnail/hirumasika.jpg", alt: "昼間鹿" },
-    { id: "motercar", src: "/thumbnail/motercar.jpg", alt: "モーターカー" },
-    { id: "myounitikan", src: "/thumbnail/myounitikan.jpg", alt: "妙位置間" },
-    { id: "yasuda", src: "/thumbnail/yasuda.jpg", alt: "安田" },
-    { id: "yohane", src: "/thumbnail/yohane.jpg", alt: "ヨハネ" },
-    { id: "horibiru", src: "/thumbnail/horibiru.jpg", alt: "ホリビル" },
-    { id: "edoya", src: "/thumbnail/edoya.jpeg", alt: "江戸屋" },
-    { id: "256fes2", src: "/thumbnail/256fes2.jpeg", alt: "256フェス2" },
-    { id: "VRCavater", src: "/thumbnail/VRCavater.jpg", alt: "VRアバター" },
-    { id: "256trolly", src: "/thumbnail/256trolly.jpeg", alt: "256トロリー" },
-    { id: "shinomorivr", src: "/thumbnail/shinomorivr.jpeg", alt: "篠森VR" },
-    { id: "256fes", src: "/thumbnail/256fes.jpeg", alt: "256フェス" },
-    { id: "asio15", src: "/thumbnail/asio15.jpeg", alt: "アシオ15" },
+    {
+      id: "hirumasika",
+      src: "/thumbnail/hirumasika.jpg",
+      alt: "昼間鹿",
+      content: <Model.HirumaShika />,
+    },
+    {
+      id: "motercar",
+      src: "/thumbnail/motercar.jpg",
+      alt: "モーターカー",
+      content: <Model.MotercarAbout />,
+    },
+    {
+      id: "myounitikan",
+      src: "/thumbnail/myounitikan.jpg",
+      alt: "明日館",
+      content: <Model.Myounitikan />,
+    },
+    {
+      id: "yasuda",
+      src: "/thumbnail/yasuda.jpg",
+      alt: "安田",
+      content: <Model.Yasuda />,
+    },
+    {
+      id: "yohane",
+      src: "/thumbnail/yohane.jpg",
+      alt: "ヨハネ",
+      content: <Model.Yohane />,
+    },
+    {
+      id: "horibiru",
+      src: "/thumbnail/horibiru.jpg",
+      alt: "ホリビル",
+      content: <Model.Horibiru />,
+    },
+    {
+      id: "edoya",
+      src: "/thumbnail/edoya.jpeg",
+      alt: "江戸屋",
+      content: <Model.Edoya />,
+    },
+    {
+      id: "256fes2",
+      src: "/thumbnail/256fes2.jpeg",
+      alt: "256フェス2",
+      content: <Model.Fes256Avatar2 />,
+    },
+    {
+      id: "VRCavater",
+      src: "/thumbnail/VRCavater.jpg",
+      alt: "VRアバター",
+      content: <Model.VRCavater />,
+    },
+    {
+      id: "256trolly",
+      src: "/thumbnail/256trolly.jpeg",
+      alt: "256トロリー",
+      content: <Model.Trolly256 />,
+    },
+    {
+      id: "shinomorivr",
+      src: "/thumbnail/shinomorivr.jpeg",
+      alt: "篠森VR",
+      content: <Model.ShinomoriVR />,
+    },
+    {
+      id: "256fes",
+      src: "/thumbnail/256fes.jpeg",
+      alt: "256フェス",
+      content: <Model.Fes256Avatar1 />,
+    },
+    {
+      id: "asio15",
+      src: "/thumbnail/asio15.jpeg",
+      alt: "アシオ15",
+      content: <Model.Asio15 />,
+    },
     {
       id: "asiopapercraft",
       src: "/thumbnail/asiopapercraft.jpeg",
       alt: "アシオペーパークラフト",
+      content: <Model.Asiopapercraft />,
     },
   ];
 
   const hardwares = [
-    { id: "PC", src: "/thumbnail/PC.jpg", alt: "PC" },
-    { id: "tap", src: "/thumbnail/tap.jpg", alt: "タップ" },
+    { id: "PC", src: "/thumbnail/PC.jpg", alt: "PC", content: <Hardware.PC /> },
+    {
+      id: "tap",
+      src: "/thumbnail/tap.jpg",
+      alt: "タップ",
+      content: <Hardware.Tap />,
+    },
   ];
   const [selectedName, setSelectedName] = useState("");
 

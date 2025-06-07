@@ -73,10 +73,7 @@ export default function ThumbnailSection({
   return (
     <Row className="g-0 mb-4">
       <Col xs={12} className="title mb-2">
-        <h1>
-          {title}
-          {12 / breakpoint}
-        </h1>
+        <h1>{title}</h1>
       </Col>
       {renderedItems.map((item) => (
         <>{item}</>
