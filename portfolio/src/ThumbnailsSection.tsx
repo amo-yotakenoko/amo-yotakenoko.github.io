@@ -2,6 +2,7 @@ import { Col, Row } from "react-bootstrap";
 import Thumbnail from "./Thumbnail";
 import type { ThumbnailProps } from "./Thumbnail";
 import useBootstrapWidth from "./useBootstrapWidth";
+import { motion, AnimatePresence } from "framer-motion";
 
 type SectionProps = {
   title: string;
@@ -45,7 +46,18 @@ export default function ThumbnailSection({
     contentQueue.push(
       <>
         <Col xs={12} key={`divider-${index}`}>
-          {item.id}
+          <AnimatePresence mode="wait">
+            {item.content && selectedName === item.id && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                {item.content}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </Col>
       </>
     );

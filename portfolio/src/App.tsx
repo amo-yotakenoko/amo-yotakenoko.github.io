@@ -4,6 +4,7 @@ import "./App.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Thumbnail from "./Thumbnail";
+import * as Application from "./page/Application";
 
 import ThumbnailSection from "./ThumbnailsSection";
 function App() {
@@ -17,25 +18,49 @@ function App() {
   };
   // var miniThumbnailCol = { xs: 12, md: 12, lg: 6 };
   const applications = [
-    { id: "sotuken", src: "/thumbnail/sotuken.jpg", alt: "卒研" },
+    {
+      id: "sotuken",
+      src: "/thumbnail/sotuken.jpg",
+      alt: "卒研",
+      content: <Application.Sotuken />,
+    },
     {
       id: "pompom_pattern",
       src: "/thumbnail/pompom_pattern.jpg",
       alt: "ポンポンパターン",
+
+      content: <Application.PompomPattern />,
     },
-    { id: "3Dbeads", src: "/thumbnail/3Dbeads.jpg", alt: "3Dビーズ" },
+    {
+      id: "3Dbeads",
+      src: "/thumbnail/3Dbeads.jpg",
+      alt: "3Dビーズ",
+      content: <Application.ThreeDBeadsAbout />,
+    },
     {
       id: "colorSeggester",
       src: "/thumbnail/colorSeggester.jpg",
       alt: "カラーセグメンター",
+      content: <Application.ColorSeggester />,
     },
     {
       id: "virtualrobot",
       src: "/thumbnail/virtualrobot.jpeg",
       alt: "バーチャルロボット",
+      content: <Application.VirtualRobot />,
     },
-    { id: "pomo-yo", src: "/thumbnail/pomo-yo.jpeg", alt: "ポモよ" },
-    { id: "amo-yo", src: "/thumbnail/amo-yo.jpeg", alt: "アモよ" },
+    {
+      id: "pomo-yo",
+      src: "/thumbnail/pomo-yo.jpeg",
+      alt: "ポモよ",
+      content: <Application.Pomoyo />,
+    },
+    {
+      id: "amo-yo",
+      src: "/thumbnail/amo-yo.jpeg",
+      alt: "アモよ",
+      content: <Application.Amoyo />,
+    },
   ];
 
   const models = [

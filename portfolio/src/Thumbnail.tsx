@@ -9,6 +9,7 @@ type ThumbnailProps = {
   colSize?: colSize;
   selectedName?: string;
   setSelectedName?: React.Dispatch<React.SetStateAction<string>>;
+  content?: React.ReactNode;
 };
 
 const Thumbnail: React.FC<ThumbnailProps> = ({
@@ -33,7 +34,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
                 "card-img-top thumbnail " +
                 (selectedName === id ? "selected-thumbnail" : "")
               }
-              onClick={() => setSelectedName?.(id)}
+              onClick={() => setSelectedName?.(selectedName === id ? "" : id)}
             />
           </div>
         </div>
