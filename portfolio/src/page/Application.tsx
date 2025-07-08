@@ -127,7 +127,7 @@ export const VirtualRobot = () => {
   return (
     <Container className="py-5">
       {/* タイトル＋紹介文 */}
-      <Row className="align-items-center mb-4">
+      <Row className="align-items-center">
         <Col lg={6} xs={12}>
           <h1 className="mb-3">VirtualRobot</h1>
           <p>
@@ -135,7 +135,7 @@ export const VirtualRobot = () => {
             ミッションをクリアするごとに使えるパーツが増えていき、それぞれ目的の違う12+2のミッションをクリアすることが目標で、制限のうちで攻略すると追加でスターが集められるやりこみ要素もあります。
           </p>
         </Col>
-        <Col lg={6} xs={12}>
+        <Col lg={6} xs={12} className="mt-3">
           <YouTube
             videoUrl="https://www.youtube.com/embed/5CGP4YijZ6k"
             autoplay={true}
@@ -144,32 +144,32 @@ export const VirtualRobot = () => {
       </Row>
 
       {/* 表彰動画 */}
-      <Row className="mb-4">
-        <Col xs={12}>
-          <p className="mb-3">
-            ゲームクリエイター甲子園 2022でU-18部門 総合賞
-            佳作を頂き実況していただきました。
-          </p>
-        </Col>
-        <Col lg={6} xs={12} className="mb-3 mb-lg-0">
-          <YouTube videoUrl="https://www.youtube.com/embed/lR0mVyNdVUs?start=2050" />
-        </Col>
-        <Col lg={6} xs={12}>
-          <YouTube videoUrl="https://www.youtube.com/embed/aD1M5IysgzQ" />
-        </Col>
-        <Col xs={12}>
-          <p className="mt-3">
-            <a
-              href="https://gck-prod-uploads.s3.ap-northeast-1.amazonaws.com/pdfs/97a21aa7-e6eb-4303-b978-e3b07880f748.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              応募時の説明pdf
-            </a>
-          </p>
-          <div className="day">2023/4/13</div>
-        </Col>
-      </Row>
+      {/* <Row className="mb-4 mt-4"> */}
+      <Col xs={12}>
+        <p className="mb-3">
+          ゲームクリエイター甲子園 2022でU-18部門 総合賞
+          佳作を頂き実況していただきました。
+        </p>
+      </Col>
+      <Col lg={6} xs={12} className="mt-3 px-3">
+        <YouTube videoUrl="https://www.youtube.com/embed/lR0mVyNdVUs?start=2050" />
+      </Col>
+      <Col lg={6} xs={12} className="mt-3">
+        <YouTube videoUrl="https://www.youtube.com/embed/aD1M5IysgzQ" />
+      </Col>
+      <Col xs={12}>
+        <p className="mt-3">
+          <a
+            href="https://gck-prod-uploads.s3.ap-northeast-1.amazonaws.com/pdfs/97a21aa7-e6eb-4303-b978-e3b07880f748.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            応募時の説明pdf
+          </a>
+        </p>
+        <div className="day">2023/4/13</div>
+      </Col>
+      {/* </Row> */}
 
       {/* ブログ紹介 */}
       <Row className="mb-4">
@@ -188,7 +188,7 @@ export const VirtualRobot = () => {
       </Row>
 
       {/* 詳しく見るボタン */}
-      <Row>
+      <Row className="mt-5">
         <Col xs={12} className="text-center">
           <Button
             variant="primary"
@@ -332,7 +332,7 @@ export const Amoyo = () => {
 export const ColorSeggester = () => {
   return (
     <Container>
-      <Row>
+      <Row className="g-0">
         <Col lg={6} xs={12}>
           <div className="title">
             <h1>ColorSeggester</h1>
@@ -357,7 +357,7 @@ export const ColorSeggester = () => {
           </ul>
         </Col>
 
-        <Col lg={6} xs={12}>
+        <Col lg={6} xs={12} className="mt-3 p-3">
           <YouTube videoUrl="https://www.youtube.com/embed/6QKCmR5b67k?si=VEkS_l5lrylOqPio&start=880" />
         </Col>
       </Row>

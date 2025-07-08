@@ -1,17 +1,13 @@
 body {
-  background-color: rgb(139, 206, 137);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(139, 206, 137, 0.1),
+    rgba(139, 206, 137, 0.1) 10px,
+    rgba(139, 206, 137, 0.2) 10px,
+    rgba(139, 206, 137, 0.2) 20px
+  ),
+  rgb(139, 206, 137);
 }
-
-/* h1{
-    color:brown;
-       font-family:'Agency FB', sans-serif;
-       
-}
-h3{
-    color:brown;
-       font-family:'Agency FB', sans-serif;
-} */
-/* @import url('https://fonts.cdnfonts.com/css/agency-fb'); */
 
 @font-face {
   font-family: "agency_fb";
@@ -23,17 +19,26 @@ h3{
 
 .name {
   font-family: "DotGothic16", sans-serif;
-  font-size: 50px;
+  font-size: 2.5rem; /* From page.css */
   font-weight: bold;
-  /* flex: 1; */
+  padding: 20px 0; /* From page.css */
   margin-right: 20px;
   align-items: center;
 }
 
 .introduction {
   font-family: "DotGothic16", sans-serif;
+}
 
-  /* flex: 2; */
+.introduction ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 30px;
+}
+
+.introduction li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 
 .title {
@@ -43,15 +48,20 @@ h3{
   text-align: center;
 }
 
+.title h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+
 .agency-font {
   font-family: "agency_fb", sans-serif;
 }
 
 .item {
   background: #0bd;
-  /* margin:10px;
-        padding:10px;  /* margin:10px;
-        padding:10px; */
 }
 
 .container {
@@ -63,27 +73,36 @@ h3{
   width: 100%;
   height: auto;
   object-fit: cover;
-  /* お好みで */
+  border-radius: 8px; /* From page.css */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* From page.css */
+  cursor: pointer; /* From page.css */
+  transition: box-shadow 0.2s ease-in-out, transform 0.3s ease; /* From page.css */
+}
+
+.thumbnail:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* From page.css */
+  transform: scale(1.05);
 }
 
 .selected-thumbnail {
-  border: 4px solid #007bff; /* 好きな色と太さに変更可能 */
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.8), 0 0 15px rgba(0, 123, 255, 0.6); /* From page.css */
+  transform: scale(1.02); /* From page.css */
 }
 
 .card {
   width: 100%;
   height: 100%;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 初期影 */
+  border: none; /* From page.css */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative; /* z-index 有効化のため */
+  position: relative;
   z-index: 0;
 }
 
 .card:hover {
-  transform: translateY(-6px); /* 上に浮かせる */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* 少し深めの影に変化 */
-  z-index: 10; /* 他のカードより上に */
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .card-img-top.thumbnail {
@@ -92,10 +111,6 @@ h3{
   object-fit: cover;
   aspect-ratio: 16/9;
 }
-
-/* .thumbnail:hover {
-  opacity: 0.7;
-} */
 
 li {
   list-style-position: inside;
@@ -132,11 +147,19 @@ li {
   background-color: #fdf251;
   border-radius: 5px;
   color: #728356;
-  /* padding: 10px; */
   font-weight: bolder;
-  /* margin: 5px;  */
 }
 
 .day {
   text-align: right;
+}
+
+/* .embed-responsive styles removed as react-bootstrap's Ratio component handles this */
+
+.motion-div-content {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #eee;
 }

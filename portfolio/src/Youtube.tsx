@@ -1,4 +1,5 @@
 import React from "react";
+import { Ratio } from "react-bootstrap";
 
 interface YouTubeProps {
   videoUrl: string;
@@ -14,11 +15,8 @@ const YouTube: React.FC<YouTubeProps> = ({ videoUrl, autoplay = false }) => {
     : videoUrl;
 
   return (
-    <div className="embed-responsive embed-responsive-16by9">
+    <Ratio aspectRatio="16x9">
       <iframe
-        width="560"
-        height="315"
-        className="embed-responsive-item"
         src={urlWithAutoplay}
         title="YouTube video player"
         frameBorder="0"
@@ -26,7 +24,7 @@ const YouTube: React.FC<YouTubeProps> = ({ videoUrl, autoplay = false }) => {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       />
-    </div>
+    </Ratio>
   );
 };
 
