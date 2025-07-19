@@ -54,6 +54,11 @@ export default function ThumbnailSection({
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
+                onAnimationComplete={() => {
+                  if (window.twttr && window.twttr.widgets) {
+                    window.twttr.widgets.load();
+                  }
+                }}
               >
                 {item.content}
               </motion.div>

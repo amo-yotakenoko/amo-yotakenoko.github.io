@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button, Ratio } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Tweet from "../Tweet";
 import YouTube from "../Youtube";
 
@@ -10,7 +11,7 @@ export const Sotuken = () => {
         <Col xs={12}>
           <div className="title">
             <h1>
-              Jetson Orin Nanoを使用した
+            Jetson Orin Nanoを使用した
               <br />
               作業台と作業者の
               <br />
@@ -46,15 +47,100 @@ export const Sotuken = () => {
               電子情報通信学会東京支部学生会研究発表会においてジュニア奨励賞を受賞しました!!
             </strong>
           </a>
+        
         </Col>
+       
+          <Col lg={6} xs={12}>
+           
+            <Tweet url="https://twitter.com/takenok58914745/status/1900828830010667036" />
+          </Col>
 
         <Col xs={12} className="mt-4">
-          <iframe
-            src="/images/卒論ポスター.pdf"
-            className="w-100"
-            style={{ border: "none", height: "90vh" }}
-            title="卒論ポスター"
-          ></iframe>
+          {/* PDF to HTML content */}
+          <div style={{ border: "1px solid #ccc", padding: "20px", borderRadius: "5px" }}>
+            <h2 style={{ textAlign: "center", borderBottom: "2px solid #000", paddingBottom: "10px" }}>
+              Jetson Orin Nanoを用いた作業台の作業者の動作解析
+            </h2>
+
+            <Row className="mt-4">
+              <Col md={6}>
+                <h3>背景と目的</h3>
+                <ul>
+                  <li>可搬式作業台において作業者が足を踏み外す事故が発生</li>
+                  <li>リスクを比較するため定量的なリスク評価が必要</li>
+                  <li>製品ごとの検出モデル開発が困難</li>
+                </ul>
+                <p className="mt-3">小型コンピューター上での簡易的な動作解析</p>
+                <p>アノテーション作業の簡略化</p>
+              </Col>
+              <Col md={6}>
+                <h3>脚立と人の姿勢を3次元復元</h3>
+                <ul>
+                  <li>脚立からのカメラの位置推定</li>
+                  <li>キーポイントへ向かうベクトル同士の最接近点を求め3次元に復元</li>
+                </ul>
+                <img src="/images/sotuken/input.png" alt="入力された画像" className="img-fluid" />
+                <p style={{ textAlign: "center" }}>図5 入力された画像</p>
+              </Col>
+            </Row>
+
+            <Row className="mt-4 align-items-center">
+              <Col md={4}>
+                <h4>Jetson Orin Nano</h4>
+                <p>NVIDIA社の小型コンピュータ</p>
+                <p>サイズ:100×79×21mm</p>
+                <img src="/images/sotuken/jetoson.jpg" alt="Jetson Orin Nano" className="img-fluid" />
+                <p style={{ textAlign: "center" }}>図1 Jetson Orin Nano</p>
+              </Col>
+              <Col md={8}>
+                <h4>Ultralytics YOLOv11</h4>
+                <ul>
+                  <li>バウンディングボックスの位置</li>
+                  <li>クラス確率</li>
+                </ul>
+                <p>を直接予測</p>
+                <p>⇨CNN 等の手法と比べ高速化</p>
+                <p>・奥行き情報は得られない</p>
+                <img src="/images/sotuken/yolo.png" alt="YOLOでの人の認識" className="img-fluid" />
+                <p style={{ textAlign: "center" }}>図2 YOLO11での人の認識</p>
+              </Col>
+            </Row>
+
+            <Row className="mt-4">
+              <Col md={12}>
+                <h3>ARマーカーを用いたデータセット作成</h3>
+                <ul>
+                  <li>脚立の手前にARマーカーを置き10分程度様々な位置から撮影</li>
+                  <li>複数ARマーカーを使用し安定性向上</li>
+                </ul>
+              </Col>
+              <Col md={6}>
+                <img src="/images/sotuken/ar.jpg" alt="ARマーカーによる自動アノテーション" className="img-fluid" />
+                <p style={{ textAlign: "center" }}>図3 ARマーカーによる自動アノテーション</p>
+              </Col>
+              <Col md={6}>
+                <img src="/images/sotuken_image_5.png" alt="脚立のキーポイント検出" className="img-fluid" />
+                <p style={{ textAlign: "center" }}>図4 脚立のキーポイント検出</p>
+                <p>1フレーム当たり68.6msで推論可能</p>
+              </Col>
+            </Row>
+
+            <Row className="mt-4">
+                <h3>重心の移動の測定</h3>
+                <p>体の各部位ごとの質量比より重心の移動を測定する</p>
+                <img src="/images/sotuken_image_6.png" alt="重心の移動の測定" className="img-fluid" />
+            </Row>
+
+            <Row className="mt-4">
+              <Col md={12}>
+                <h3>結論</h3>
+                <ul>
+                  <li>ARマーカーを使用した固定物のアノテーション作業の簡略化</li>
+                  <li>リアルタイム処理では2秒程の遅延と1秒間に11枚程の処理が可能</li>
+                </ul>
+              </Col>
+            </Row>
+          </div>
         </Col>
 
         {/* もし動画も表示したいなら下のコメントを外して使ってください */}
@@ -193,7 +279,8 @@ export const VirtualRobot = () => {
           <Button
             variant="primary"
             className="moreButton"
-            href="virtualrobot.html"
+            as={Link}
+            to="/virtualrobot"
           >
             詳しく見る
           </Button>
@@ -319,7 +406,8 @@ export const Amoyo = () => {
           <Button
             variant="primary"
             className="moreButton"
-            onClick={() => (window.location.href = "amo-yo.html")}
+            as={Link}
+            to="/amo-yo"
           >
             詳しく見る
           </Button>
@@ -406,7 +494,8 @@ export const PompomPattern = () => {
           <Col xs={12} className="mt-3 d-flex gap-2">
             <Button
               variant="primary"
-              onClick={() => (window.location.href = "pompom_pattern.html")}
+              as={Link}
+              to="/pompom_pattern"
             >
               詳しく見る
             </Button>
