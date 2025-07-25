@@ -115,37 +115,34 @@ export const PC = () => {
 
 export const Tap = () => {
   return (
-    <div id="tapAbout">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 col-12">
-            <div className="title">
-              <h1>遠隔操作電源タップマシン</h1>
-              <h4>要するにSwitchBot</h4>
-            </div>
-            DiscordBotから母がやってる家庭菜園の水耕栽培ポンプとライトのオンオフができるようにしました。
-            <br />
+    <Container id="tapAbout">
+      <Row>
+        <Col lg={12} xs={12}>
+          <div className="title">
+            <h1>遠隔操作電源タップマシン</h1>
+            <h4>要するにSwitchBot</h4>
           </div>
+          DiscordBotから母がやってる家庭菜園の水耕栽培ポンプとライトのオンオフができるようにしました。
+          <br />
+        </Col>
 
-          <div className="col-12">
-            <img
-              src="images/hardware/tap.gif"
-              alt="遠隔操作電源タップマシン"
-              style={{ maxWidth: "100%" }}
-            />
-          </div>
-
-          <div className="col-lg-6 col-12">
-            使ったもの
-            <ul>
-              <li>HackUの賞品で頂いたRaspberry Pi Zero W</li>
-              <li>家にあった電源タップ</li>
-              <li>家にあったサーボモーター</li>
-              <li>家にあったLEGO</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+        <Col lg={6} xs={6}>
+          使ったもの
+          <ul>
+            <li>HackUの賞品で頂いたRaspberry Pi Zero W</li>
+            <li>家にあった電源タップ</li>
+            <li>家にあったサーボモーター</li>
+            <li>家にあったLEGO</li>
+          </ul>
+        </Col>
+        <Col lg={6} xs={6}>
+          <img
+            src="images/hardware/tap.gif"
+            alt="遠隔操作電源タップマシン"
+            style={{ width: "100%" }}
+          />
+        </Col>
+      </Row>
+    </Container>
   );
 };

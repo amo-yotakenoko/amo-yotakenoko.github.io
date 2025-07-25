@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Ratio } from "react-bootstrap";
+import { Container, Row, Col, Button, Ratio, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Tweet from "../Tweet";
 import YouTube from "../Youtube";
@@ -44,7 +44,7 @@ export const Sotuken = () => {
             rel="noopener noreferrer"
           >
             <strong>
-              第30回
+              🏆第30回
               電子情報通信学会東京支部学生会研究発表会においてジュニア奨励賞を受賞しました!!
             </strong>
           </a>
@@ -73,36 +73,42 @@ export const Sotuken = () => {
         <Col xs={12} className="mb-4">
           <h2>使用技術</h2>
         </Col>
-        <Col md={{ span: 6, order: 1 }}>
-          <h4>Jetson Orin Nano</h4>
-          <p>NVIDIA社の小型コンピュータ</p>
-          <p>サイズ:100×79×21mm</p>
+        <Col lg={6}>
+          <Row className="align-items-center">
+            <Col md={{ span: 6, order: 1 }}>
+              <h4>Jetson Orin Nano</h4>
+              <p>NVIDIA社の小型コンピュータ</p>
+              <p>サイズ:100×79×21mm</p>
+            </Col>
+            <Col md={{ span: 6, order: 2 }}>
+              <img
+                src="/images/sotuken/jetoson.jpg"
+                alt="Jetson Orin Nano"
+                className="img-fluid rounded"
+              />
+            </Col>
+          </Row>
         </Col>
-        <Col md={{ span: 6, order: 2 }}>
-          <img
-            src="/images/sotuken/jetoson.jpg"
-            alt="Jetson Orin Nano"
-            className="img-fluid rounded"
-          />
-        </Col>
-      </Row>
-      <Row className="py-4 align-items-center">
-        <Col md={{ span: 6, order: 1 }}>
-          <img
-            src="/images/sotuken/yolo.png"
-            alt="YOLOでの人の認識"
-            className="img-fluid rounded"
-          />
-        </Col>
-        <Col md={{ span: 6, order: 2 }}>
-          <h4>Ultralytics YOLOv11</h4>
-          <ul>
-            <li>バウンディングボックスの位置</li>
-            <li>クラス確率</li>
-          </ul>
-          <p>を直接予測</p>
-          <p>⇨CNN 等の手法と比べ高速化</p>
-          <p>・奥行き情報は得られない</p>
+        <Col lg={6}>
+          <Row className="align-items-center">
+            <Col md={{ span: 6, order: 1 }}>
+              <h4>Ultralytics YOLOv11</h4>
+              <ul>
+                <li>バウンディングボックスの位置</li>
+                <li>クラス確率</li>
+              </ul>
+              <p>を直接予測</p>
+              <p>⇨CNN 等の手法と比べ高速化</p>
+              <p>・奥行き情報は得られない</p>
+            </Col>
+            <Col md={{ span: 6, order: 2 }}>
+              <img
+                src="/images/sotuken/yolo.png"
+                alt="YOLOでの人の認識"
+                className="img-fluid rounded"
+              />
+            </Col>
+          </Row>
         </Col>
       </Row>
 
@@ -256,7 +262,7 @@ export const VirtualRobot = () => {
       {/* <Row className="mb-4 mt-4"> */}
       <Col xs={12}>
         <p className="mb-3">
-          ゲームクリエイター甲子園 2022でU-18部門 総合賞
+          🏆ゲームクリエイター甲子園 2022でU-18部門 総合賞
           佳作を頂き実況していただきました。
         </p>
       </Col>
@@ -281,29 +287,37 @@ export const VirtualRobot = () => {
       {/* </Row> */}
 
       {/* ブログ紹介 */}
-      <Row className="mb-4">
-        <Col xs={12}>
-          <p>
-            <a
-              href="https://www.chickensblog.com/virtual-robot-2021/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              チキンズブログ様にワークショップイベントを行った様子を紹介していただきました。
-            </a>
-          </p>
-          <div className="day">2022/4/7</div>
-        </Col>
-      </Row>
 
-      {/* 詳しく見るボタン */}
+      <Col xs={12}>
+        <p>
+          <a
+            href="https://www.chickensblog.com/virtual-robot-2021/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            チキンズブログ様にワークショップイベントを行った様子を紹介していただきました。
+          </a>
+        </p>
+        <div className="day">2022/4/7</div>
+      </Col>
+
       <Row className="mt-5">
-        <Col xs={12} className="text-center">
+        <Col xs={12} className="text-center d-flex gap-2">
           <Button
             variant="primary"
-            className="moreButton"
+            className="w-100"
+            onClick={() =>
+              (window.location.href =
+                "https://github.com/amo-yotakenoko/VIrtualRobot3_windows/archive/refs/heads/main.zip")
+            }
+          >
+            ダウンロード
+          </Button>
+          <Button
+            variant="primary"
+            className="w-100"
             as={Link}
-            to="/virtualrobot"
+            to="/pompom_pattern"
           >
             詳しく見る
           </Button>
@@ -327,6 +341,19 @@ export const Pomoyo = () => {
               一般の本では既存の巻き図しか載っておらずオリジナルのぽんぽんを作ることは困難ですが、
               このアプリはオリジナルのぽんぽんを誰でも簡単に作ることができます。
             </p>
+
+            <strong>
+              🏆
+              <a
+                href="https://www.wiss.org/WISS2020/award.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WISS 2020:
+                第28回インタラクティブシステムとソフトウェアに関するワークショップ
+              </a>
+              において「動物ぽんぽんの模様を作るアプリケーションの開発」として発表し萌芽発表賞を頂きました!
+            </strong>
           </Col>
 
           <Col md={6}>
@@ -347,11 +374,11 @@ export const Pomoyo = () => {
           </Col>
         </Row>
 
-        <div className="mt-4 text-center">
+        {/* <div className="mt-4 text-center">
           <Button variant="primary" className="moreButton">
             詳しく見る
           </Button>
-        </div>
+        </div> */}
       </Container>
     </div>
   );
@@ -383,6 +410,7 @@ export const Amoyo = () => {
           </p>
           <ul>
             <li>
+              💪
               <a
                 href="https://jr.mitou.org/projects/2019#amoyo"
                 target="_blank"
@@ -393,6 +421,7 @@ export const Amoyo = () => {
               で開発しました。
             </li>
             <li>
+              🎨
               <a
                 href="https://vivita.jp/"
                 target="_blank"
@@ -402,7 +431,7 @@ export const Amoyo = () => {
               </a>{" "}
               でワークショップを行いました。
             </li>
-            <li>アプリ甲子園2020でCygames賞を頂きました</li>
+            <li>🏆アプリ甲子園2020でCygames賞を頂きました</li>
           </ul>
         </Col>
 
@@ -456,6 +485,7 @@ export const ColorSeggester = () => {
 
           <ul>
             <li>
+              🏆
               <a
                 href="https://hacku.yahoo.co.jp/cit2023/"
                 target="_blank"
@@ -471,6 +501,33 @@ export const ColorSeggester = () => {
         <Col lg={6} xs={12} className="mt-3 p-3">
           <YouTube videoUrl="https://www.youtube.com/embed/6QKCmR5b67k?si=VEkS_l5lrylOqPio&start=880" />
         </Col>
+        <Row className="align-items-center">
+          {/* ボタン（左側） */}
+          <Col xs={12} md="auto">
+            <Button
+              variant="primary"
+              onClick={() =>
+                (window.location.href =
+                  "https://amo-yotakenoko.github.io/color-suggester/")
+              }
+            >
+              使ってみる(スマートフォン推奨)
+              <br />
+              1か月のハッカソンであることを踏まえバグ等はあえて修正していません。
+            </Button>
+          </Col>
+
+          {/* QRコード（右側） ※スマホでは非表示 */}
+          <Col className="d-none d-md-block">
+            <Image
+              src="images/colorsuggester_qr.jpg"
+              alt="QRコード"
+              width={120}
+              fluid
+              rounded
+            />
+          </Col>
+        </Row>
       </Row>
     </Container>
   );
@@ -500,7 +557,7 @@ export const PompomPattern = () => {
                 rel="noopener noreferrer"
               >
                 <strong>
-                  U-22プログラミングコンテストで経済産業大臣賞＜総合＞を頂きました(賞金50万円)
+                  🏆U-22プログラミングコンテストで経済産業大臣賞＜総合＞を頂きました(賞金50万円)
                 </strong>
               </a>
             </p>
@@ -514,10 +571,159 @@ export const PompomPattern = () => {
             <YouTube videoUrl="https://www.youtube.com/embed/DCQ3mESzDf8?si=SjCW0j3fPwjd09S4" />
           </Col>
 
+          <Col xs={12}>
+            <ul>
+              <li>主にReact, Typescriptを使用して実装</li>
+              <li>
+                使用したライブラリ等
+                <ul>
+                  <li>3D表示: Three.js</li>
+                  <li>カラーパレット: React Color</li>
+                  <li>デザインテンプレート: Bootstrap</li>
+                  <li>
+                    アイコン: Bootstrap Icons,
+                    イラストレーション・アイコン素材（デジタル庁）, Affinity
+                    Designerを用いて作成
+                  </li>
+                  <li>骨格推定:MediaPipe Hands</li>
+                  <li>ホスティング: GitHub Pages</li>
+                  <li>
+                    保存領域はLocalStorage
+                    (別途画像として外部にエクスポート可能)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                PWAアプリとして開発しているため、ダウンロードせずに試しに使ってみる、気に入ったらインストールして外でもデータ通信せずに使うといった使い方が可能です。
+              </li>
+            </ul>
+          </Col>
+
+          <Col xs={12}>
+            <h2>ぽんぽんとは</h2>
+            <p>
+              ぽんぽんやぼんぼんとよばれる毛糸を使った手芸をご存じでしょうか?
+              毛糸と百均等でも売っている専用の器具や厚紙などを使って作ることができます
+            </p>
+            <div style={{ textAlign: "center" }}>
+              <Image
+                src="/images/pompom_pattern/展開.gif"
+                style={{ width: "80%" }}
+                fluid
+              />
+              <div>ぽんぽんの構造のイメージ</div>
+            </div>
+            <p className="mt-3">
+              このぽんぽんに巻く際、途中で毛糸の色を変えることでぽんぽんに模様を入れることができます。
+              しかし所望のデザインを得るために,予めどのような順番でどの色を巻けばいいかという判断は非直観的であり、本アプリではGUI
+              上でぽんぽんの完成図を設計することで,それを作るための巻き図を出力します。
+            </p>
+
+            <h2>編集画面</h2>
+            <p>編集画面では3Dのぽんぽんに色を塗っていきます。</p>
+            <div style={{ textAlign: "center" }}>
+              <Image
+                src="/images/pompom_pattern/edit.jpg"
+                style={{ width: "80%" }}
+                fluid
+              />
+              <div>編集画面</div>
+            </div>
+
+            <h2>設計図画面</h2>
+            <p>
+              設計図画面どの色を何回何段巻くかが表示されます。巻いたところをタップすることで済のマークが表示されます。また左上に残りの合計巻き数、現在の進捗率が表示されます。
+            </p>
+            <div style={{ textAlign: "center" }}>
+              <Image
+                src="/images/pompom_pattern/設計図.png"
+                style={{ width: "50%" }}
+                fluid
+              />
+              <div>設計図</div>
+            </div>
+
+            <h2>共有</h2>
+            <p>
+              設計図画面の右上を押すことで設計図の情報の入った巻き図の画像をダウンロードすることができ、ホーム画面の「画像から読み込み」
+              ボタンから読み込んで編集することが可能です。その為各種SNS等で画像として巻き図の画像を装飾の仕方と共に共有することができます
+            </p>
+            <div style={{ textAlign: "center" }}>
+              <Image
+                src="/images/pompom_pattern/共有.png"
+                style={{ width: "80%" }}
+                fluid
+              />
+              <div>設計図のエクスポート</div>
+            </div>
+
+            <h2>工夫した点</h2>
+            <p>
+              ぽんぽんの緯度にあたる角度を等間隔にした場合曲に近い毛糸の面積が小さくなってしまう為,表面積が均一になるように調整しました
+            </p>
+            <div style={{ textAlign: "center" }}>
+              <Image
+                src="/images/pompom_pattern/面積.png"
+                style={{ width: "80%" }}
+                fluid
+              />
+              <Image
+                src="/images/pompom_pattern/面積2.png"
+                style={{ width: "80%" }}
+                fluid
+              />
+              <div>毛糸の等表面積化</div>
+            </div>
+
+            <h2>経緯</h2>
+            <p>
+              過去に Google Play、App Store で Unity
+              で開発していたものを公開していましたが、Developer
+              ライセンスが切れてしまい、長らく放置していたところ、何人かからこのアプリを使いたいという連絡をいただきました。それを受けて、プログラムをゼロから書き直し、UI
+              なども再設計しました。
+            </p>
+
+            <h2>使っていただきました</h2>
+            <p>
+              画面は古いバージョンになります{" "}
+              <a
+                href="https://x.com/den_xap/status/1843099282930597949"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                掲載許可を頂きました
+              </a>
+            </p>
+            <Row>
+              <Col xs={4}>
+                <Tweet url="https://twitter.com/den_xap/status/1663389246592548864" />
+              </Col>
+              <Col xs={4}>
+                <Tweet url="https://twitter.com/den_xap/status/1617379474773016578" />
+              </Col>
+              <Col xs={4}>
+                <Tweet url="https://twitter.com/den_xap/status/1605823096597860353" />
+              </Col>
+            </Row>
+
+            <h2>最後に</h2>
+            <p>
+              本アプリによって毛糸ぽんぽんを使った手芸の自由度が広がれば良いなと思っています
+            </p>
+            <div style={{ textAlign: "center" }}>
+              <Image
+                src="/images/pompom_pattern/最後に.png"
+                style={{ width: "80%" }}
+                fluid
+              />
+              <div>完成したぽんぽんたち</div>
+            </div>
+          </Col>
+
           <Col xs={12} className="mt-3 d-flex gap-2">
-            <Button variant="primary" as={Link} to="/pompom_pattern">
+            {/* <Button variant="primary" as={Link} to="/pompom_pattern">
               詳しく見る
-            </Button>
+            </Button> */}
             <Button
               variant="primary"
               onClick={() =>
