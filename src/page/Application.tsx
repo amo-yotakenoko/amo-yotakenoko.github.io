@@ -695,13 +695,13 @@ export const PompomPattern = () => {
               </a>
             </p>
             <Row>
-              <Col xs={4}>
+              <Col xs={12} sm={6} md={4}>
                 <Tweet url="https://twitter.com/den_xap/status/1663389246592548864" />
               </Col>
-              <Col xs={4}>
+              <Col xs={12} sm={6} md={4}>
                 <Tweet url="https://twitter.com/den_xap/status/1617379474773016578" />
               </Col>
-              <Col xs={4}>
+              <Col xs={12} sm={6} md={4}>
                 <Tweet url="https://twitter.com/den_xap/status/1605823096597860353" />
               </Col>
             </Row>
@@ -737,5 +737,43 @@ export const PompomPattern = () => {
         </Row>
       </Container>
     </div>
+  );
+};
+
+export const VirtualRobot4 = () => {
+  return (
+    <Container className="py-5">
+      {/* Title Section */}
+      <Row className="pb-5 align-items-center">
+        <Col lg={12} xs={12}>
+          <div className="title">
+            <h1>BlenderとScratchを使用する仮想ロボット開発メタバース</h1>
+          </div>
+        </Col>
+        <Col lg={12} xs={12}>
+          <img
+            src="/images/virtualrobot/composition.jpg"
+            alt="構成図"
+            style={{
+              mixBlendMode: "multiply",
+              width: "100%",
+            }}
+          />
+        </Col>
+      </Row>
+      <Row className="py-4 align-items-center border-top">
+        <h2> Scratch Day 2025 in Tokyoで展示を行いました</h2>
+
+        <Col xs={12} sm={6} md={4}>
+          <Tweet url="https://twitter.com/den_xap/status/1926152931323081150" />
+        </Col>
+        <Col xs={12} sm={6} md={4}>
+          <Tweet url="https://twitter.com/den_xap/status/1926161076489494846" />
+        </Col>
+        <Col xs={12} sm={6} md={4}>
+          <Tweet url="https://twitter.com/den_xap/status/1932461844209471861" />
+        </Col>
+      </Row>
+    </Container>
   );
 };

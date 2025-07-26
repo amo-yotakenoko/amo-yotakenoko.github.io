@@ -21,6 +21,12 @@ function App() {
   // var miniThumbnailCol = { xs: 12, md: 12, lg: 6 };
   const applications = [
     {
+      id: "virtualRobot4",
+      src: "/thumbnail/virtualRobot4.jpg",
+      alt: "BlenderとScratchを使用する仮想ロボット開発メタバース",
+      content: <Application.VirtualRobot4 />,
+    },
+    {
       id: "sotuken",
       src: "/thumbnail/sotuken.jpg",
       alt: "卒研",
