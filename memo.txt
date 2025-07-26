@@ -1,6 +1,0 @@
-wslで実行
-git checkout react-migration 
-
-
-
-npm run dev
