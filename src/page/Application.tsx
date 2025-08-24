@@ -535,208 +535,243 @@ export const ColorSeggester = () => {
 
 export const PompomPattern = () => {
   return (
-    <div id="pompom_patternAbout">
-      <Container>
-        <Row>
-          <Col lg={12} xs={12}>
-            <div className="title">
-              <img
-                src="images/pompom_title.jpg"
-                alt="ぽんぽん設計図ジェネレーター"
-                style={{ mixBlendMode: "multiply", width: "100%" }}
-              />
-              <h4>ぽんぽん設計図ジェネレーター</h4>
-            </div>
-            <p>
-              一般的に毛糸を使ったパターン入りぽんぽん手芸はオリジナルの物を作ることは困難で、本を参考に作る場合が殆どですが、このアプリを使うことで簡単にオリジナルの設計図が作成でき、手芸の自由度を広げます。
-            </p>
-            <p>
-              <a
-                href="https://web.archive.org/web/20241120012206/https://news.yahoo.co.jp/articles/781e7971f3d9f99ad7edadd72c19bd7017bce83b"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <strong>
-                  🏆U-22プログラミングコンテストで経済産業大臣賞＜総合＞を頂きました(賞金50万円)
-                </strong>
-              </a>
-            </p>
-          </Col>
+    <Container className="py-5">
+      {/* Title Section */}
+      <Row className="pb-5 align-items-center">
+        <Col lg={12} xs={12}>
+          <div className="title">
+            <img
+              src="images/pompom_title.jpg"
+              alt="ぽんぽん設計図ジェネレーター"
+              style={{ mixBlendMode: "multiply", width: "100%" }}
+            />
+            <h4>ぽんぽん設計図ジェネレーター</h4>
+          </div>
+        </Col>
+        <Col lg={6} xs={12}>
+          <p className="mt-3">
+            一般的に毛糸を使ったパターン入りぽんぽん手芸はオリジナルの物を作ることは困難で、本を参考に作る場合が殆どですが、このアプリを使うことで簡単にオリジナルの設計図が作成でき、手芸の自由度を広げます。
+          </p>
+          <p>
+            <a
+              href="https://web.archive.org/web/20241120012206/https://news.yahoo.co.jp/articles/781e7971f3d9f99ad7edadd72c19bd7017bce83b"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>
+                🏆U-22プログラミングコンテストで経済産業大臣賞＜総合＞を頂きました(賞金50万円)
+              </strong>
+            </a>
+          </p>
+        </Col>
+        <Col lg={6} xs={12} className="mt-4 mt-lg-0">
+          <YouTube videoUrl="https://www.youtube.com/embed/BEMMV-svT_A?si=L8hwIvC2ShO7T-S6" />
+        </Col>
+      </Row>
 
-          <Col lg={6} xs={12}>
-            <YouTube videoUrl="https://www.youtube.com/embed/BEMMV-svT_A?si=L8hwIvC2ShO7T-S6" />
-          </Col>
+      <Row className="py-4 align-items-center border-top">
+        <Col lg={6} xs={12}>
+          <YouTube videoUrl="https://www.youtube.com/embed/DCQ3mESzDf8?si=SjCW0j3fPwjd09S4" />
+        </Col>
+      </Row>
 
-          <Col lg={6} xs={12}>
-            <YouTube videoUrl="https://www.youtube.com/embed/DCQ3mESzDf8?si=SjCW0j3fPwjd09S4" />
-          </Col>
+      {/* Section: ワークショップ */}
+      <Row className="py-4 align-items-center border-top">
+        <Col xs={12}>
+          <h2>ワークショップを行いました!</h2>
+        </Col>
+        <Col lg={6} xs={12}>
+          <img
+            src="/images/pompom_pattern/workshop1.jpg"
+            alt="ワークショップの様子"
+            style={{ width: "100%" }}
+          />
+        </Col>
+        <Col lg={6} xs={12}>
+          <img
+            src="/images/pompom_pattern/workshop2.jpg"
+            alt="ワークショップの様子"
+            style={{ width: "100%" }}
+          />
+        </Col>
+      </Row>
 
-          <Col xs={12}>
-            <ul>
-              <li>主にReact, Typescriptを使用して実装</li>
-              <li>
-                使用したライブラリ等
-                <ul>
-                  <li>3D表示: Three.js</li>
-                  <li>カラーパレット: React Color</li>
-                  <li>デザインテンプレート: Bootstrap</li>
-                  <li>
-                    アイコン: Bootstrap Icons,
-                    イラストレーション・アイコン素材（デジタル庁）, Affinity
-                    Designerを用いて作成
-                  </li>
-                  <li>骨格推定:MediaPipe Hands</li>
-                  <li>ホスティング: GitHub Pages</li>
-                  <li>
-                    保存領域はLocalStorage
-                    (別途画像として外部にエクスポート可能)
-                  </li>
-                </ul>
-              </li>
-              <li>
-                PWAアプリとして開発しているため、ダウンロードせずに試しに使ってみる、気に入ったらインストールして外でもデータ通信せずに使うといった使い方が可能です。
-              </li>
-            </ul>
-          </Col>
+      {/* Section: ぽんぽんとは */}
+      <Row className="py-4 align-items-center border-top">
+        <Col xs={12}>
+          <h2>ぽんぽんとは</h2>
+          <p>
+            ぽんぽんやぼんぼんとよばれる毛糸を使った手芸をご存じでしょうか?
+            毛糸と百均等でも売っている専用の器具や厚紙などを使って作ることができます
+          </p>
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/pompom_pattern/展開.gif"
+              style={{ width: "80%" }}
+              fluid
+            />
+            <div>ぽんぽんの構造のイメージ</div>
+          </div>
+          <p className="mt-3">
+            このぽんぽんに巻く際、途中で毛糸の色を変えることでぽんぽんに模様を入れることができます。
+            しかし所望のデザインを得るために,予めどのような順番でどの色を巻けばいいかという判断は非直観的であり、本アプリではGUI
+            上でぽんぽんの完成図を設計することで,それを作るための巻き図を出力します。
+          </p>
+        </Col>
+      </Row>
 
-          <Col xs={12}>
-            <h2>ぽんぽんとは</h2>
-            <p>
-              ぽんぽんやぼんぼんとよばれる毛糸を使った手芸をご存じでしょうか?
-              毛糸と百均等でも売っている専用の器具や厚紙などを使って作ることができます
-            </p>
-            <div style={{ textAlign: "center" }}>
-              <Image
-                src="/images/pompom_pattern/展開.gif"
-                style={{ width: "80%" }}
-                fluid
-              />
-              <div>ぽんぽんの構造のイメージ</div>
-            </div>
-            <p className="mt-3">
-              このぽんぽんに巻く際、途中で毛糸の色を変えることでぽんぽんに模様を入れることができます。
-              しかし所望のデザインを得るために,予めどのような順番でどの色を巻けばいいかという判断は非直観的であり、本アプリではGUI
-              上でぽんぽんの完成図を設計することで,それを作るための巻き図を出力します。
-            </p>
+      {/* Section: 編集画面 */}
+      <Row className="py-4 align-items-center border-top">
+        <Col xs={12}>
+          <h2>編集画面</h2>
+          <p>編集画面では3Dのぽんぽんに色を塗っていきます。</p>
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/pompom_pattern/edit.jpg"
+              style={{ width: "80%" }}
+              fluid
+            />
+            <div>編集画面</div>
+          </div>
+        </Col>
+      </Row>
 
-            <h2>編集画面</h2>
-            <p>編集画面では3Dのぽんぽんに色を塗っていきます。</p>
-            <div style={{ textAlign: "center" }}>
-              <Image
-                src="/images/pompom_pattern/edit.jpg"
-                style={{ width: "80%" }}
-                fluid
-              />
-              <div>編集画面</div>
-            </div>
+      {/* Section: 設計図画面 */}
+      <Row className="py-4 align-items-center border-top">
+        <Col xs={12}>
+          <h2>設計図画面</h2>
+          <p>
+            設計図画面どの色を何回何段巻くかが表示されます。巻いたところをタップすることで済のマークが表示されます。また左上に残りの合計巻き数、現在の進捗率が表示されます。
+          </p>
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/pompom_pattern/設計図.png"
+              style={{ width: "50%" }}
+              fluid
+            />
+            <div>設計図</div>
+          </div>
+        </Col>
+      </Row>
 
-            <h2>設計図画面</h2>
-            <p>
-              設計図画面どの色を何回何段巻くかが表示されます。巻いたところをタップすることで済のマークが表示されます。また左上に残りの合計巻き数、現在の進捗率が表示されます。
-            </p>
-            <div style={{ textAlign: "center" }}>
-              <Image
-                src="/images/pompom_pattern/設計図.png"
-                style={{ width: "50%" }}
-                fluid
-              />
-              <div>設計図</div>
-            </div>
+      {/* Section: 共有 */}
+      <Row className="py-4 align-items-center border-top">
+        <Col xs={12}>
+          <h2>共有</h2>
+          <p>
+            設計図画面の右上を押すことで設計図の情報の入った巻き図の画像をダウンロードすることができ、ホーム画面の「画像から読み込み」
+            ボタンから読み込んで編集することが可能です。その為各種SNS等で画像として巻き図の画像を装飾の仕方と共に共有することができます
+          </p>
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/pompom_pattern/共有.png"
+              style={{ width: "80%" }}
+              fluid
+            />
+            <div>設計図のエクスポート</div>
+          </div>
+        </Col>
+      </Row>
 
-            <h2>共有</h2>
-            <p>
-              設計図画面の右上を押すことで設計図の情報の入った巻き図の画像をダウンロードすることができ、ホーム画面の「画像から読み込み」
-              ボタンから読み込んで編集することが可能です。その為各種SNS等で画像として巻き図の画像を装飾の仕方と共に共有することができます
-            </p>
-            <div style={{ textAlign: "center" }}>
-              <Image
-                src="/images/pompom_pattern/共有.png"
-                style={{ width: "80%" }}
-                fluid
-              />
-              <div>設計図のエクスポート</div>
-            </div>
+      {/* Section: 工夫した点 */}
+      <Row className="py-4 align-items-center border-top">
+        <Col xs={12}>
+          <h2>工夫した点</h2>
+          <p>
+            ぽんぽんの緯度にあたる角度を等間隔にした場合曲に近い毛糸の面積が小さくなってしまう為,表面積が均一になるように調整しました
+          </p>
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/pompom_pattern/面積.png"
+              style={{ width: "80%" }}
+              fluid
+            />
+            <Image
+              src="/images/pompom_pattern/面積2.png"
+              style={{ width: "80%" }}
+              fluid
+            />
+            <div>毛糸の等表面積化</div>
+          </div>
+        </Col>
+      </Row>
 
-            <h2>工夫した点</h2>
-            <p>
-              ぽんぽんの緯度にあたる角度を等間隔にした場合曲に近い毛糸の面積が小さくなってしまう為,表面積が均一になるように調整しました
-            </p>
-            <div style={{ textAlign: "center" }}>
-              <Image
-                src="/images/pompom_pattern/面積.png"
-                style={{ width: "80%" }}
-                fluid
-              />
-              <Image
-                src="/images/pompom_pattern/面積2.png"
-                style={{ width: "80%" }}
-                fluid
-              />
-              <div>毛糸の等表面積化</div>
-            </div>
+      {/* Section: 経緯 */}
+      <Row className="py-4 align-items-center border-top">
+        <Col xs={12}>
+          <h2>経緯</h2>
+          <p>
+            過去に Google Play、App Store で Unity
+            で開発していたものを公開していましたが、Developer
+            ライセンスが切れてしまい、長らく放置していたところ、何人かからこのアプリを使いたいという連絡をいただきました。それを受けて、プログラムをゼロから書き直し、UI
+            なども再設計しました。
+          </p>
+        </Col>
+      </Row>
 
-            <h2>経緯</h2>
-            <p>
-              過去に Google Play、App Store で Unity
-              で開発していたものを公開していましたが、Developer
-              ライセンスが切れてしまい、長らく放置していたところ、何人かからこのアプリを使いたいという連絡をいただきました。それを受けて、プログラムをゼロから書き直し、UI
-              なども再設計しました。
-            </p>
+      {/* Section: 使っていただきました */}
+      <Row className="py-4 align-items-center border-top">
+        <Col xs={12}>
+          <h2>使っていただきました</h2>
+          <p>
+            画面は古いバージョンになります{" "}
+            <a
+              href="https://x.com/den_xap/status/1843099282930597949"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              掲載許可を頂きました
+            </a>
+          </p>
+          <Row>
+            <Col xs={12} sm={6} md={4}>
+              <Tweet url="https://twitter.com/den_xap/status/1663389246592548864" />
+            </Col>
+            <Col xs={12} sm={6} md={4}>
+              <Tweet url="https://twitter.com/den_xap/status/1617379474773016578" />
+            </Col>
+            <Col xs={12} sm={6} md={4}>
+              <Tweet url="https://twitter.com/den_xap/status/1605823096597860353" />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
 
-            <h2>使っていただきました</h2>
-            <p>
-              画面は古いバージョンになります{" "}
-              <a
-                href="https://x.com/den_xap/status/1843099282930597949"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                掲載許可を頂きました
-              </a>
-            </p>
-            <Row>
-              <Col xs={12} sm={6} md={4}>
-                <Tweet url="https://twitter.com/den_xap/status/1663389246592548864" />
-              </Col>
-              <Col xs={12} sm={6} md={4}>
-                <Tweet url="https://twitter.com/den_xap/status/1617379474773016578" />
-              </Col>
-              <Col xs={12} sm={6} md={4}>
-                <Tweet url="https://twitter.com/den_xap/status/1605823096597860353" />
-              </Col>
-            </Row>
+      {/* Section: 最後に */}
+      <Row className="py-4 align-items-center border-top">
+        <Col xs={12}>
+          <h2>最後に</h2>
+          <p>
+            本アプリによって毛糸ぽんぽんを使った手芸の自由度が広がれば良いなと思っています
+          </p>
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/pompom_pattern/最後に.png"
+              style={{ width: "80%" }}
+              fluid
+            />
+            <div>完成したぽんぽんたち</div>
+          </div>
+        </Col>
+      </Row>
 
-            <h2>最後に</h2>
-            <p>
-              本アプリによって毛糸ぽんぽんを使った手芸の自由度が広がれば良いなと思っています
-            </p>
-            <div style={{ textAlign: "center" }}>
-              <Image
-                src="/images/pompom_pattern/最後に.png"
-                style={{ width: "80%" }}
-                fluid
-              />
-              <div>完成したぽんぽんたち</div>
-            </div>
-          </Col>
-
-          <Col xs={12} className="mt-3 d-flex gap-2">
-            {/* <Button variant="primary" as={Link} to="/pompom_pattern">
+      <Row className="py-4 align-items-center border-top">
+        <Col xs={12} className="mt-3 d-flex gap-2">
+          {/* <Button variant="primary" as={Link} to="/pompom_pattern">
               詳しく見る
             </Button> */}
-            <Button
-              variant="primary"
-              onClick={() =>
-                (window.location.href =
-                  "https://amo-yotakenoko.github.io/pompom_pattern_web/")
-              }
-            >
-              使ってみる
-            </Button>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+          <Button
+            variant="primary"
+            onClick={() =>
+              (window.location.href =
+                "https://amo-yotakenoko.github.io/pompom_pattern_web/")
+            }
+          >
+            使ってみる
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

@@ -1,6 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 import * as Application from "./page/Application";
@@ -22,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/pompom_pattern",
     element: <PompomPatternPage />,
+  },
+  {
+    path: "*",
+    element: <Navigate to="/" />,
   },
 ]);
 
