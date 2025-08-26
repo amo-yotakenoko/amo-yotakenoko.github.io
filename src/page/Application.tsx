@@ -580,6 +580,9 @@ export const PompomPattern = () => {
         <Col xs={12}>
           <h2>ワークショップを行いました!</h2>
         </Col>
+        <p>
+          JimoKidsフェスティバル2025にてオリジナルのぽんぽんをアプリを使って作ってもらうワークショップを行いました。
+        </p>
         <Col lg={6} xs={12}>
           <img
             src="/images/pompom_pattern/workshop1.jpg"

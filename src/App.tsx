@@ -7,6 +7,7 @@ import Thumbnail from "./Thumbnail";
 import * as Application from "./page/Application";
 import * as Model from "./page/Model";
 import * as Hardware from "./page/Hardware";
+import { History } from "./page/history";
 
 import ThumbnailSection from "./ThumbnailsSection";
 function App() {
@@ -171,19 +172,25 @@ function App() {
 
   return (
     <>
-      <Container>
-        <Row className="gx-0">
-          <Col lg={6} xs={12}>
-            <span className="name">武田和樹 </span>
+      <Container as="header" className="py-3 py-md-5 text-center text-lg-start">
+        <Row className="align-items-center">
+          <Col lg={6}>
+            <h1 className="name display-4">武田和樹</h1>
           </Col>
-          <Col lg={6} xs={12} className="introduction">
-            <ul>
-              {/* <li>産技高専電子情報コース5年</li>  */}
-              <li>手芸の支援アプリ等を趣味で開発しています。</li>
-            </ul>
+          <Col lg={6}>
+            <p className="lead">
+              東京都立産業技術高等専門学校 ものづくり工学科 電子情報工学コース卒
+              <br />
+              誰も作ってないアプリを作りたいです
+            </p>
+          </Col>
+          <Col lg={12}>
+            <History />
           </Col>
         </Row>
+      </Container>
 
+      <Container>
         <ThumbnailSection
           title="Application"
           items={applications}

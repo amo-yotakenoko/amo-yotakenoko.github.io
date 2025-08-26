@@ -17,28 +17,14 @@ body {
     url("https://fonts.cdnfonts.com/s/13829/agency_fb.woff") format("woff");
 }
 
+
 .name {
   font-family: "DotGothic16", sans-serif;
-  font-size: 2.5rem; /* From page.css */
   font-weight: bold;
-  padding: 20px 0; /* From page.css */
-  margin-right: 20px;
-  align-items: center;
 }
 
 .introduction {
   font-family: "DotGothic16", sans-serif;
-}
-
-.introduction ul {
-  list-style: none;
-  padding: 0;
-  padding-top: 30px;
-}
-
-.introduction li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
 }
 
 .title {
