@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import {
   Container,
   Row,
@@ -7,11 +7,17 @@ import {
   Image,
   Card,
   ListGroup,
+  Modal,
 } from "react-bootstrap";
 import YouTube from "../Youtube";
 import Tweet from "../Tweet";
 
-export const History = () => {
+interface HistoryProps {
+  show: boolean;
+  onHide: () => void;
+}
+
+export const History: React.FC<HistoryProps> = ({ show, onHide }) => {
   const achievements = [
     {
       year: "2015",
@@ -99,30 +105,34 @@ export const History = () => {
   ];
 
   return (
-    <>
-      <Container className="py-5">
-        <Col xs={12} className="title mb-2">
-          <h1>Activity History</h1>
-        </Col>
-        <Card className="mb-3">
-          {achievements.map((ach) => (
-            <>
-              <Card.Header className="bg-success bg-opacity-25 fs-5">
+    <Modal show={show} onHide={onHide} size="lg" centered>
+      <Modal.Header closeButton>
+        <Modal.Title>
+          <Col xs={12} className="title mb-2">
+            <h1> Activity History</h1>
+          </Col>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        {achievements.map((ach, index) => (
+          <div key={index}>
+            <div className="p-2 bg-success bg-opacity-25 rounded-top">
+              <h5 className="mb-0">
                 <strong>
                   {ach.year}: {ach.title}
                 </strong>
-              </Card.Header>
-              {ach.items.length > 0 && (
-                <ListGroup variant="flush">
-                  {ach.items.map((item, i) => (
-                    <ListGroup.Item key={i}>{item}</ListGroup.Item>
-                  ))}
-                </ListGroup>
-              )}
-            </>
-          ))}
-        </Card>
-      </Container>
-    </>
+              </h5>
+            </div>
+            {ach.items.length > 0 && (
+              <ListGroup>
+                {ach.items.map((item, i) => (
+                  <ListGroup.Item key={i}>{item}</ListGroup.Item>
+                ))}
+              </ListGroup>
+            )}
+          </div>
+        ))}
+      </Modal.Body>
+    </Modal>
   );
 };

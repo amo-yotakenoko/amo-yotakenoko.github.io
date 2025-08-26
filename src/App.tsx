@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 import "./App.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Thumbnail from "./Thumbnail";
 import * as Application from "./page/Application";
 import * as Model from "./page/Model";
 import * as Hardware from "./page/Hardware";
-import { History } from "./page/history";
+import { History } from "./page/History";
 
 import ThumbnailSection from "./ThumbnailsSection";
 function App() {
@@ -169,23 +169,26 @@ function App() {
     },
   ];
   const [selectedName, setSelectedName] = useState("");
+  const [showHistory, setShowHistory] = useState(false);
 
   return (
     <>
-      <Container as="header" className="py-3 py-md-5 text-center text-lg-start">
+      <History show={showHistory} onHide={() => setShowHistory(false)} />
+
+      <Container className="my-5">
         <Row className="align-items-center">
-          <Col lg={6}>
+          <Col lg={5}>
             <h1 className="name display-4">武田和樹</h1>
           </Col>
-          <Col lg={6}>
+          <Col lg={7}>
             <p className="lead">
               東京都立産業技術高等専門学校 ものづくり工学科 電子情報工学コース卒
               <br />
               誰も作ってないアプリを作りたいです
             </p>
-          </Col>
-          <Col lg={12}>
-            <History />
+            <Button variant="primary" onClick={() => setShowHistory(true)}>
+              活動履歴等
+            </Button>
           </Col>
         </Row>
       </Container>
