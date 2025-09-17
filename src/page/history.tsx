@@ -67,7 +67,7 @@ export const History: React.FC<HistoryProps> = ({ show, onHide }) => {
     },
     {
       year: "2023",
-      title: "🗿 VRによる美術鑑賞拡張のケーススタディ",
+      title: "🗿 VRによる美術鑑賞拡張のケーススタディ(共著)",
       items: [
         "📃 第28回バーチャルリアリティ学会大会にて論文発表（モデリング担当）",
       ],
