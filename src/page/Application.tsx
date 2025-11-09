@@ -166,6 +166,7 @@ export const Sotuken = () => {
               src="/images/sotuken/normal.webp"
               alt="(a)枠を持った時の動作"
               className="img-fluid rounded"
+              loading="lazy"
             />
             <div className="mt-2">(a)枠を持った時の動作</div>
           </div>
@@ -176,6 +177,7 @@ export const Sotuken = () => {
               src="/images/sotuken/denger.webp"
               alt="(b)枠を掴まず荷物を持った際の動作"
               className="img-fluid rounded"
+              loading="lazy"
             />
             <div className="mt-2">(b)枠を掴まず荷物を持った際の動作</div>
           </div>

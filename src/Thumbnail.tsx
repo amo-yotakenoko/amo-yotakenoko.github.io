@@ -35,6 +35,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
                 (selectedName === id ? "selected-thumbnail" : "")
               }
               onClick={() => setSelectedName?.(selectedName === id ? "" : id)}
+              loading="lazy"
             />
           </div>
         </div>
