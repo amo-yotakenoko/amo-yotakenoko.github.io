@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  /* カスタムプロパティ (CSS変数) として色を定義 */
+
+  /* --カラー名: R G B; の形式で定義する */
+  --color-mint: #8fc6c6;
+  --color-brown: #bb9861;
+  --color-calm: #eee9d4;
+}

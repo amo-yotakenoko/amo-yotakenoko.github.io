@@ -5,7 +5,7 @@ function Header() {
   return (
     <>
       <motion.header
-        className="flex justify-between items-center text-white h-16"
+        className="flex justify-between items-center  h-16"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{

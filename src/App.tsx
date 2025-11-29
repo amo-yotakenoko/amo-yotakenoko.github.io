@@ -6,7 +6,7 @@ import Name from "./components/Name.tsx";
 function App() {
   return (
     <>
-      <main className="h-screen gb-slate-900 bg-slate-800">
+      <main className="h-screen bg-calm text-brown">
         <div className="container mx-auto ">
           <Header />
           <Name />
