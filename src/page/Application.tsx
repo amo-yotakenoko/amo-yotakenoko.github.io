@@ -540,17 +540,16 @@ export const PompomPattern = () => {
     <Container className="py-5">
       {/* Title Section */}
       <Row className="pb-5 align-items-center">
-        <Col lg={12} xs={12}>
+        <Col lg={6} xs={12}>
           <div className="title">
             <img
               src="images/pompom_title.jpg"
               alt="ぽんぽん設計図ジェネレーター"
-              style={{ mixBlendMode: "multiply", width: "100%" }}
+              className="img-fluid"
+              style={{ mixBlendMode: "multiply" }}
             />
-            <h4>ぽんぽん設計図ジェネレーター</h4>
+            <h4 className="mt-3">ぽんぽん設計図ジェネレーター</h4>
           </div>
-        </Col>
-        <Col lg={6} xs={12}>
           <p className="mt-3">
             一般的に毛糸を使ったパターン入りぽんぽん手芸はオリジナルの物を作ることは困難で、本を参考に作る場合が殆どですが、このアプリを使うことで簡単にオリジナルの設計図が作成でき、手芸の自由度を広げます。
           </p>
@@ -572,7 +571,7 @@ export const PompomPattern = () => {
       </Row>
 
       <Row className="py-4 align-items-center border-top">
-        <Col lg={6} xs={12}>
+        <Col lg={12} xs={12}>
           <YouTube videoUrl="https://www.youtube.com/embed/DCQ3mESzDf8?si=SjCW0j3fPwjd09S4" />
         </Col>
       </Row>
@@ -581,60 +580,62 @@ export const PompomPattern = () => {
       <Row className="py-4 align-items-center border-top">
         <Col xs={12}>
           <h2>ワークショップを行いました!</h2>
+          <p>
+            JimoKidsフェスティバル2025にてオリジナルのぽんぽんをアプリを使って作ってもらうワークショップを行いました。
+          </p>
         </Col>
-        <p>
-          JimoKidsフェスティバル2025にてオリジナルのぽんぽんをアプリを使って作ってもらうワークショップを行いました。
-        </p>
         <Col lg={6} xs={12}>
           <img
             src="/images/pompom_pattern/workshop1.jpg"
             alt="ワークショップの様子"
-            style={{ width: "100%" }}
+            className="img-fluid rounded"
           />
         </Col>
         <Col lg={6} xs={12}>
           <img
             src="/images/pompom_pattern/workshop2.jpg"
             alt="ワークショップの様子"
-            style={{ width: "100%" }}
+            className="img-fluid rounded"
           />
         </Col>
       </Row>
 
       {/* Section: ぽんぽんとは */}
       <Row className="py-4 align-items-center border-top">
-        <Col xs={12}>
+        <Col md={6}>
           <h2>ぽんぽんとは</h2>
           <p>
             ぽんぽんやぼんぼんとよばれる毛糸を使った手芸をご存じでしょうか?
             毛糸と百均等でも売っている専用の器具や厚紙などを使って作ることができます
           </p>
-          <div style={{ textAlign: "center" }}>
-            <Image
-              src="/images/pompom_pattern/展開.gif"
-              style={{ width: "80%" }}
-              fluid
-            />
-            <div>ぽんぽんの構造のイメージ</div>
-          </div>
           <p className="mt-3">
             このぽんぽんに巻く際、途中で毛糸の色を変えることでぽんぽんに模様を入れることができます。
             しかし所望のデザインを得るために,予めどのような順番でどの色を巻けばいいかという判断は非直観的であり、本アプリではGUI
             上でぽんぽんの完成図を設計することで,それを作るための巻き図を出力します。
           </p>
         </Col>
+        <Col md={6}>
+          <div style={{ textAlign: "center" }}>
+            <Image
+              src="/images/pompom_pattern/展開.gif"
+              className="img-fluid rounded"
+            />
+            <div>ぽんぽんの構造のイメージ</div>
+          </div>
+        </Col>
       </Row>
 
       {/* Section: 編集画面 */}
       <Row className="py-4 align-items-center border-top">
-        <Col xs={12}>
+        <Col md={6}>
           <h2>編集画面</h2>
           <p>編集画面では3Dのぽんぽんに色を塗っていきます。</p>
+        </Col>
+        <Col md={6}>
           <div style={{ textAlign: "center" }}>
             <Image
               src="/images/pompom_pattern/edit.jpg"
-              style={{ width: "80%" }}
-              fluid
+              className="img-fluid rounded"
             />
             <div>編集画面</div>
           </div>
@@ -643,16 +644,18 @@ export const PompomPattern = () => {
 
       {/* Section: 設計図画面 */}
       <Row className="py-4 align-items-center border-top">
-        <Col xs={12}>
+        <Col md={6}>
           <h2>設計図画面</h2>
           <p>
             設計図画面どの色を何回何段巻くかが表示されます。巻いたところをタップすることで済のマークが表示されます。また左上に残りの合計巻き数、現在の進捗率が表示されます。
           </p>
+        </Col>
+        <Col md={6}>
           <div style={{ textAlign: "center" }}>
             <Image
               src="/images/pompom_pattern/設計図.png"
-              style={{ width: "50%" }}
-              fluid
+              className="img-fluid rounded"
+              style={{ maxWidth: "50%" }}
             />
             <div>設計図</div>
           </div>
@@ -661,17 +664,18 @@ export const PompomPattern = () => {
 
       {/* Section: 共有 */}
       <Row className="py-4 align-items-center border-top">
-        <Col xs={12}>
+        <Col md={6}>
           <h2>共有</h2>
           <p>
             設計図画面の右上を押すことで設計図の情報の入った巻き図の画像をダウンロードすることができ、ホーム画面の「画像から読み込み」
             ボタンから読み込んで編集することが可能です。その為各種SNS等で画像として巻き図の画像を装飾の仕方と共に共有することができます
           </p>
+        </Col>
+        <Col md={6}>
           <div style={{ textAlign: "center" }}>
             <Image
               src="/images/pompom_pattern/共有.png"
-              style={{ width: "80%" }}
-              fluid
+              className="img-fluid rounded"
             />
             <div>設計図のエクスポート</div>
           </div>
@@ -680,24 +684,22 @@ export const PompomPattern = () => {
 
       {/* Section: 工夫した点 */}
       <Row className="py-4 align-items-center border-top">
-        <Col xs={12}>
+        <Col md={6}>
           <h2>工夫した点</h2>
           <p>
             ぽんぽんの緯度にあたる角度を等間隔にした場合曲に近い毛糸の面積が小さくなってしまう為,表面積が均一になるように調整しました
           </p>
-          <div style={{ textAlign: "center" }}>
-            <Image
-              src="/images/pompom_pattern/面積.png"
-              style={{ width: "80%" }}
-              fluid
-            />
-            <Image
-              src="/images/pompom_pattern/面積2.png"
-              style={{ width: "80%" }}
-              fluid
-            />
-            <div>毛糸の等表面積化</div>
-          </div>
+        </Col>
+        <Col md={6}>
+          <Image
+            src="/images/pompom_pattern/面積.png"
+            className="img-fluid rounded"
+          />
+          <Image
+            src="/images/pompom_pattern/面積2.png"
+            className="img-fluid rounded mt-3"
+          />
+          <div className="text-center">毛糸の等表面積化</div>
         </Col>
       </Row>
 
@@ -744,16 +746,17 @@ export const PompomPattern = () => {
 
       {/* Section: 最後に */}
       <Row className="py-4 align-items-center border-top">
-        <Col xs={12}>
+        <Col md={6}>
           <h2>最後に</h2>
           <p>
             本アプリによって毛糸ぽんぽんを使った手芸の自由度が広がれば良いなと思っています
           </p>
+        </Col>
+        <Col md={6}>
           <div style={{ textAlign: "center" }}>
             <Image
               src="/images/pompom_pattern/最後に.png"
-              style={{ width: "80%" }}
-              fluid
+              className="img-fluid rounded"
             />
             <div>完成したぽんぽんたち</div>
           </div>
