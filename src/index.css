@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss" source("../src");
 
 @theme {
   /* カスタムプロパティ (CSS変数) として色を定義 */
