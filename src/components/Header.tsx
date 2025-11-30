@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import ScrollingMarquee from "./ScrollingMarquee.tsx";
 function Header() {
   return (
     <>
@@ -25,6 +25,10 @@ function Header() {
           </ul>
         </nav>
       </motion.header>
+
+      <ScrollingMarquee reverse={false} offset={0} />
+      <ScrollingMarquee reverse={true} offset={-0.5} />
+      <ScrollingMarquee reverse={false} offset={0} />
     </>
   );
 }
