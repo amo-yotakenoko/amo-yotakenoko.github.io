@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 interface AnimatedGridProps {
   items: { id: string; src: string; alt: string; content: React.ReactNode }[];
   colsClass: string;
+  setModalContent: (content: React.ReactNode) => void;
 }
 
 const containerVariants = {
@@ -24,7 +25,11 @@ const itemVariants = {
   },
 };
 
-const AnimatedGrid: React.FC<AnimatedGridProps> = ({ items, colsClass }) => {
+const AnimatedGrid: React.FC<AnimatedGridProps> = ({
+  items,
+  colsClass,
+  setModalContent,
+}) => {
   return (
     <motion.div
       className={`grid ${colsClass} gap-4 p-2`}
@@ -46,8 +51,10 @@ const AnimatedGrid: React.FC<AnimatedGridProps> = ({ items, colsClass }) => {
             duration-200
             hover:-translate-y-2
             hover:shadow-xl
+            cursor-pointer
           "
           variants={itemVariants}
+          onClick={() => setModalContent(item.content)}
         >
           <img
             src={item.src}

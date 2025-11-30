@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button, Ratio, Image } from "react-bootstrap";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Tweet from "../Tweet";
 import YouTube from "../Youtube";
@@ -317,14 +317,14 @@ export const VirtualRobot = () => {
           >
             ダウンロード
           </Button>
-          <Button
+          {/* <Button
             variant="primary"
             className="w-100"
             as={Link}
             to="/pompom_pattern"
           >
             詳しく見る
-          </Button>
+          </Button> */}
         </Col>
       </Row>
     </Container>
@@ -458,7 +458,7 @@ export const Amoyo = () => {
           <YouTube videoUrl="https://www.youtube.com/embed/6nUVJZCijBw?si=-_75-e2PaOVEOkHS" />
         </Col>
 
-        <Col xs={12} className="mt-3">
+        {/* <Col xs={12} className="mt-3">
           <Button
             variant="primary"
             className="moreButton"
@@ -467,7 +467,7 @@ export const Amoyo = () => {
           >
             詳しく見る
           </Button>
-        </Col>
+        </Col> */}
       </Row>
     </Container>
   );
@@ -542,7 +542,7 @@ export const PompomPattern = () => {
     <Container className="py-5">
       {/* Title Section */}
       <Row className="pb-5 align-items-center">
-        <Col lg={6} xs={12}>
+        <Col lg={12} xs={12}>
           <div className="title">
             <img
               src="images/pompom_title.jpg"
@@ -570,10 +570,7 @@ export const PompomPattern = () => {
         <Col lg={6} xs={12} className="mt-4 mt-lg-0">
           <YouTube videoUrl="https://www.youtube.com/embed/BEMMV-svT_A?si=L8hwIvC2ShO7T-S6" />
         </Col>
-      </Row>
-
-      <Row className="py-4 align-items-center border-top">
-        <Col lg={12} xs={12}>
+        <Col lg={6} xs={12}>
           <YouTube videoUrl="https://www.youtube.com/embed/DCQ3mESzDf8?si=SjCW0j3fPwjd09S4" />
         </Col>
       </Row>

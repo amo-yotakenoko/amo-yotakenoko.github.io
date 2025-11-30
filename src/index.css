@@ -2,12 +2,11 @@
 @import "tailwindcss" source("../src");
 
 @theme {
-  /* カスタムプロパティ (CSS変数) として色を定義 */
-
-  /* --カラー名: R G B; の形式で定義する */
+  /* 配色アイデア手帖p246アールデコ */
   --color-mint: #8fc6c6;
   --color-brown: #bb9861;
   --color-calm: #eee9d4;
+  --color-ebony: #4f413c;
 
   --font-asimovian: "Asimovian", sans-serif;
   --font-geostar: "Geostar", sans-serif;

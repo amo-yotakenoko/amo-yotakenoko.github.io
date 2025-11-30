@@ -1,8 +1,14 @@
+import React from "react";
 import * as Application from "./page/Application";
 import * as Model from "./page/Model";
 import * as Hardware from "./page/Hardware";
 import SectionTitle from "./CommonComponents";
-import AnimatedGrid from "./AnimatedGrid"; // Import the new animated grid component
+import AnimatedGrid from "./AnimatedGrid";
+
+// Define props type for Contents component
+interface ContentsProps {
+  setModalContent: (content: React.ReactNode) => void;
+}
 
 const applications = [
   {
@@ -153,28 +159,31 @@ const hardwares = [
   },
 ];
 
-function Contents() { // Renamed from Application to Contents to avoid confusion with Application.tsx
+const Contents: React.FC<ContentsProps> = ({ setModalContent }) => {
   return (
     <>
       <SectionTitle title="Application" />
       <AnimatedGrid
         items={applications}
         colsClass="grid-cols-1 sm:grid-cols-2 md:grid-cols-2"
+        setModalContent={setModalContent}
       />
 
       <SectionTitle title="3D Model" />
       <AnimatedGrid
         items={models}
         colsClass="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+        setModalContent={setModalContent}
       />
 
       <SectionTitle title="Hardwares" />
       <AnimatedGrid
         items={hardwares}
         colsClass="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+        setModalContent={setModalContent}
       />
     </>
   );
-}
+};
 
 export default Contents;
