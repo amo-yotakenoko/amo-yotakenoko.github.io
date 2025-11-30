@@ -66,7 +66,7 @@ function ScrollingMarquee({
     <>
       {/* <div>ScroolMarquee</div> */}
 
-      <div className="overflow-x-hidden w-screen min-h-[196px]">
+      <div className="overflow-x-hidden w-full min-h-[196px]">
         <motion.div
           className="flex space-x-4 p-2"
           initial={{ x: inital_x }}
