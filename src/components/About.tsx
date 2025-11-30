@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
-import SectionTitle from "./CommonComponents";
+import { History } from "./history";
+import { SectionTitle, Button } from "./CommonComponents";
 
-function About() {
+function About({
+  setModalContent,
+}: {
+  setModalContent: (content: React.ReactNode) => void;
+}) {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -77,8 +82,6 @@ function About() {
 
   return (
     <>
-      <SectionTitle title="About" />
-
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-5 "
         initial="hidden"
@@ -87,22 +90,27 @@ function About() {
         variants={containerVariants}
       >
         <motion.div className="col-span-2 p-3" variants={itemVariants}>
-          <h1 className="font-asimovian text-center text-2xl px-4 mx-auto w-fit border-b-4 border-mint">
-            About me
-          </h1>
-          <div className="text-lg">
+          <SectionTitle title="About me" />
+          <div className="text-lg pt-4">
             　小学生時代にScratchに熱中し、その作品をもとに開発したアプリで中学時代に未踏ジュニアに採択。PMの勧めで東京都立産業技術高専に進学。2025年、ものづくり工学科電子情報工学コースを卒業。
             <br />
             　プログラミング以外の趣味は、Blenderを使った3Dモデリング、近代建築巡り。
           </div>
+          <div className="flex justify-center mt-4">
+            <Button
+              text="History"
+              onClick={() => setModalContent(<History />)}
+            />
+          </div>
         </motion.div>
         <motion.div className="col-span-3 p-3" variants={itemVariants}>
-          <h1 className="font-asimovian text-center text-2xl px-4 mx-auto w-fit border-b-4 border-mint">
+          {/* <h1 className="font-asimovian text-center text-2xl px-4 mx-auto w-fit border-b-4 border-mint">
             触れた技術
-          </h1>
+          </h1> */}
+          <SectionTitle title="触れた技術" />
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 text-lg"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 text-lg pt-4"
             variants={containerVariants}
           >
             <motion.div variants={itemVariants}>

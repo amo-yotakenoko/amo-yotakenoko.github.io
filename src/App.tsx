@@ -5,14 +5,16 @@ import Header from "./components/Header.tsx";
 import Modal from "./components/Modal.tsx";
 
 function App() {
-  const [modalContent, setModalContent] = useState<React.ReactNode | null>(null);
+  const [modalContent, setModalContent] = useState<React.ReactNode | null>(
+    null
+  );
 
   return (
     <>
       <main className="w-full bg-brown text-calm ">
         <Header />
         <div className="container mx-auto ">
-          <About />
+          <About setModalContent={setModalContent} />
           <Application setModalContent={setModalContent} />
         </div>
         <Modal content={modalContent} onClose={() => setModalContent(null)} />

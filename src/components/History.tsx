@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Tweet from "../Tweet";
-import SectionTitle from "./CommonComponents";
+import { SectionTitle } from "./CommonComponents";
 
 function History() {
   const achievements = [
@@ -78,7 +78,7 @@ function History() {
       year: 2025,
       title:
         "🎓 東京都立産業技術高等専門学校ものづくり工学科電子情報工学コース卒業",
-      items: [],
+      items: ["💻 黒木研究室所属"],
     },
     {
       year: 2025,
@@ -92,21 +92,27 @@ function History() {
 
   return (
     <>
-      <SectionTitle title="Activity History" />
+      <div className="p-4 mb-4">
+        <SectionTitle title="Activity History" />
+      </div>
 
       {achievements.map((ach, index) => (
-        <div key={index}>
-          <div className="p-2 bg-success bg-opacity-25 rounded-top">
-            <h5 className="mb-0">
-              <strong>
-                {ach.year}: {ach.title}
-              </strong>
+        <div key={index} className="mb-4">
+          <div className="">
+            <h5 className=" text-lg md:text-xl font-bold mb-2 ">
+              {ach.year}: {ach.title}
+            </h5>
+
+            <div className="border-l-4 border-mint pt-1 ">
               {ach.items.map((item, itemIndex) => (
-                <div key={itemIndex} className="pl-4">
-                  ・{item}
+                <div
+                  key={itemIndex}
+                  className="text-base md:text-lg text-ebony "
+                >
+                  <div className="ml-[-9px]">✦{item}</div>
                 </div>
               ))}
-            </h5>
+            </div>
           </div>
         </div>
       ))}

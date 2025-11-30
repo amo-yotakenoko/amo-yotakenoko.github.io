@@ -2,7 +2,7 @@ import React from "react";
 import * as Application from "./page/Application";
 import * as Model from "./page/Model";
 import * as Hardware from "./page/Hardware";
-import SectionTitle from "./CommonComponents";
+import { SectionTitle, Button } from "./CommonComponents";
 import AnimatedGrid from "./AnimatedGrid";
 
 // Define props type for Contents component
