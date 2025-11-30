@@ -4,35 +4,37 @@ import { motion } from "framer-motion";
 function Name() {
   return (
     <>
-      <section className="lg:py48 py-32 ">
-        <div className="flex item-center justify-between ">
+      <section className=" ">
+        <div className="flex item-center justify-between text-calm">
           <div className="space-y-8">
             <motion.h2
-              className="lg:text-9xl font-bold text-6xl lg:max-w-[40rem] "
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              className="lg:text-9xl font-bold text-6xl "
+              initial={{ y: -100 }}
+              animate={{ y: 0 }}
               transition={{
+                type: "spring",
                 duration: 1,
-                delay: 0.5,
+                delay: 0,
                 stiffness: 200,
-                damping: 10,
               }}
             >
-              Takeda Kazuki
+              <img
+                src="/images/name.svg"
+                alt="TakedaKazuki"
+                className="w-[800px] h-auto"
+              />
             </motion.h2>
             <motion.p
               className="font-semibold "
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: -100 }}
+              animate={{ y: 0 }}
               transition={{
+                type: "spring",
                 duration: 1,
-                delay: 0.8,
-                stiffness: 200,
-                damping: 10,
+                delay: 0,
+                stiffness: 250,
               }}
-            >
-              転職したい
-            </motion.p>
+            ></motion.p>
           </div>
         </div>
       </section>

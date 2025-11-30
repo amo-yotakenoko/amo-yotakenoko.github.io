@@ -66,7 +66,7 @@ function ScrollingMarquee({
     <>
       {/* <div>ScroolMarquee</div> */}
 
-      <div className="overflow-x-hidden w-screen">
+      <div className="overflow-x-hidden w-screen min-h-[196px]">
         <motion.div
           className="flex space-x-4 p-2"
           initial={{ x: inital_x }}
@@ -76,7 +76,7 @@ function ScrollingMarquee({
             <div
               key={imgPass}
               // 🔽 flex-shrink-0: 幅 (w-80) が親要素の幅が狭くなっても縮まないように固定
-              className="aspect-video flex-shrink-0 w-80 overflow-hidden"
+              className="aspect-video flex-shrink-0 w-80 overflow-hidden "
             >
               {/* {imgPass} */}
               <img

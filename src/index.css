@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Asimovian&family=Geostar&display=swap");
 @import "tailwindcss" source("../src");
 
 @theme {
@@ -7,4 +8,7 @@
   --color-mint: #8fc6c6;
   --color-brown: #bb9861;
   --color-calm: #eee9d4;
+
+  --font-asimovian: "Asimovian", sans-serif;
+  --font-geostar: "Geostar", sans-serif;
 }
