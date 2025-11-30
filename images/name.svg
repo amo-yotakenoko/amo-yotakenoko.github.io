@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:square;stroke-miterlimit:2;">
+    <g transform="matrix(11.801,0,0,2.86986,-717.489,-356.547)">
+        <g transform="matrix(0.0847384,0,0,0.348449,57.3184,95.2323)">
+            <text x="62.625px" y="246.962px" style="font-family:'851Gkktt';font-size:144px;fill:none;stroke:rgb(187,152,97);stroke-width:3.88px;">Takeda</text>
+            <text x="206.625px" y="402.962px" style="font-family:'851Gkktt';font-size:144px;fill:none;stroke:rgb(187,152,97);stroke-width:3.88px;">Kazuki</text>
+        </g>
+        <g transform="matrix(0.0847384,0,0,0.348449,57.3184,95.2323)">
+            <text x="62.625px" y="246.962px" style="font-family:'851Gkktt';font-size:144px;fill:rgb(183,177,151);">Takeda</text>
+            <text x="206.625px" y="402.962px" style="font-family:'851Gkktt';font-size:144px;fill:rgb(183,177,151);">Kazuki</text>
+        </g>
+    </g>
+    <g transform="matrix(11.801,0,0,2.86986,-721.98,-360.396)">
+        <g transform="matrix(0.0847384,0,0,0.348449,57.3184,95.2323)">
+            <text x="62.625px" y="246.962px" style="font-family:'851Gkktt';font-size:144px;fill:none;stroke:rgb(187,152,97);stroke-width:3.88px;">Takeda</text>
+            <text x="206.625px" y="402.962px" style="font-family:'851Gkktt';font-size:144px;fill:none;stroke:rgb(187,152,97);stroke-width:3.88px;">Kazuki</text>
+        </g>
+        <g transform="matrix(0.0847384,0,0,0.348449,57.3184,95.2323)">
+            <text x="62.625px" y="246.962px" style="font-family:'851Gkktt';font-size:144px;fill:rgb(238,233,212);">Takeda</text>
+            <text x="206.625px" y="402.962px" style="font-family:'851Gkktt';font-size:144px;fill:rgb(238,233,212);">Kazuki</text>
+        </g>
+    </g>
+</svg>
