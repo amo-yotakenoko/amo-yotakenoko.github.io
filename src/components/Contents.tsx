@@ -249,7 +249,7 @@ const Contents: React.FC<ContentsProps> = ({ setModalContent }) => {
         setModalContent={setModalContent}
       />
 
-      <SectionTitle title="Hardwares" />
+      <SectionTitle title="Hardware" />
       <AnimatedGrid
         items={hardwares}
         colsClass="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
