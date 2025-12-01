@@ -42,7 +42,16 @@ const AnimatedGrid: React.FC<AnimatedGridProps> = ({
         <motion.div
           key={item.id}
           className="
-            aspect-video
+         
+          "
+          variants={itemVariants}
+          onClick={() => setModalContent(item.content)}
+        >
+          <img
+            src={item.src}
+            alt={item.alt}
+            className="w-full h-full object-cover   
+             aspect-video
             overflow-hidden
             rounded-xl
             shadow-md
@@ -51,15 +60,7 @@ const AnimatedGrid: React.FC<AnimatedGridProps> = ({
             duration-200
             hover:-translate-y-2
             hover:shadow-xl
-            cursor-pointer
-          "
-          variants={itemVariants}
-          onClick={() => setModalContent(item.content)}
-        >
-          <img
-            src={item.src}
-            alt={item.alt}
-            className="w-full h-full object-cover"
+            cursor-pointer"
           />
         </motion.div>
       ))}

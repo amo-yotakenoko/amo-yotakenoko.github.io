@@ -16,12 +16,12 @@ const modalVariants = {
   visible: {
     y: "0",
     opacity: 1,
-    transition: { delay: 0.1, ease: "easeInOut" },
+    transition: { delay: 0.1, ease: "easeInOut" as any },
   },
   exit: {
     y: "100vh",
     opacity: 0,
-    transition: { delay: 0.1, ease: "easeInOut" },
+    transition: { delay: 0.1, ease: "easeInOut" as any },
   },
 };
 
@@ -59,7 +59,7 @@ const Modal: React.FC<ModalProps> = ({ content, onClose }) => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            onClick={(e) => e.stopPropagation()} // モーダル内クリックで閉じない
+            onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()} // モーダル内クリックで閉じない
           >
             {/* 閉じるボタン */}
             <button

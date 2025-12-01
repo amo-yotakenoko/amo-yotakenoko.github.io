@@ -1,7 +1,5 @@
-import React from "react";
-import { Container, Row, Col, Button, Ratio } from "react-bootstrap";
-import Tweet from "../Tweet";
-import YouTube from "../Youtube";
+
+import { Container, Row, Col } from "react-bootstrap";
 
 export const PC = () => {
   const items: [string, number][] = [

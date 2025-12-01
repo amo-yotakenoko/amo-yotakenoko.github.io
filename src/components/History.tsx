@@ -1,6 +1,3 @@
-import { useState } from "react";
-
-import Tweet from "../Tweet";
 import { SectionTitle } from "./CommonComponents";
 
 function History() {

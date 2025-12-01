@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
-import { scale } from "framer-motion";
 import { useFrame } from "@react-three/fiber";
 
 function Model({
@@ -37,15 +36,19 @@ function Model({
 }
 
 function ThreeModel({ url }: { url?: string }) {
+  if (!url) {
+    return null;
+  }
+
   return (
     <div className="h-[500px]">
       <Canvas camera={{ position: [20, 20, 20], fov: 50 }}>
         <ambientLight intensity={2} />
         <Model
           url={url}
-          scale={0.5}
-          position={[0, 0, 0]}
-          rotation={[0, 0, 0]}
+          scale={new THREE.Vector3(0.5, 0.5, 0.5)}
+          position={new THREE.Vector3(0, 0, 0)}
+          rotation={new THREE.Euler(0, 0, 0)}
         />
         <OrbitControls />
       </Canvas>

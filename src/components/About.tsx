@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { History } from "./history";
+import { History } from "./History";
 import { SectionTitle, Button } from "./CommonComponents";
 
 function About({

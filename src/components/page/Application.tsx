@@ -1,6 +1,6 @@
-import React from "react";
-import { Container, Row, Col, Button, Ratio, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
+import { Container, Row, Col, Image } from "react-bootstrap";
+
 
 import Tweet from "../Tweet";
 import YouTube from "../Youtube";
@@ -307,16 +307,13 @@ export const VirtualRobot = () => {
 
       <Row className="mt-5">
         <Col xs={12} className="text-center d-flex gap-2">
-          <Button
-            variant="primary"
-            className="w-100"
-            onClick={() =>
-              (window.location.href =
-                "https://github.com/amo-yotakenoko/VIrtualRobot3_windows/archive/refs/heads/main.zip")
-            }
+          <a
+            href="https://github.com/amo-yotakenoko/VIrtualRobot3_windows/archive/refs/heads/main.zip"
+            className="btn btn-primary w-100"
+            role="button"
           >
             ダウンロード
-          </Button>
+          </a>
           {/* <Button
             variant="primary"
             className="w-100"
@@ -508,17 +505,15 @@ export const ColorSeggester = () => {
         <Row className="align-items-center">
           {/* ボタン（左側） */}
           <Col xs={12} md="auto">
-            <Button
-              variant="primary"
-              onClick={() =>
-                (window.location.href =
-                  "https://amo-yotakenoko.github.io/color-suggester/")
-              }
+            <a
+              href="https://amo-yotakenoko.github.io/color-suggester/"
+              className="btn btn-primary"
+              role="button"
             >
               使ってみる(スマートフォン推奨)
               <br />
               1か月のハッカソンであることを踏まえバグ等はあえて修正していません。
-            </Button>
+            </a>
           </Col>
 
           {/* QRコード（右側） ※スマホでは非表示 */}
@@ -767,15 +762,13 @@ export const PompomPattern = () => {
           {/* <Button variant="primary" as={Link} to="/pompom_pattern">
               詳しく見る
             </Button> */}
-          <Button
-            variant="primary"
-            onClick={() =>
-              (window.location.href =
-                "https://amo-yotakenoko.github.io/pompom_pattern_web/")
-            }
+          <a
+            href="https://amo-yotakenoko.github.io/pompom_pattern_web/"
+            className="btn btn-primary"
+            role="button"
           >
             使ってみる
-          </Button>
+          </a>
         </Col>
       </Row>
     </Container>

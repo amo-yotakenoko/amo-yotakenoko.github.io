@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Row, Col, Button, Image } from "react-bootstrap";
+
+import { Container, Row, Col, Image } from "react-bootstrap";
 import YouTube from "../Youtube";
 import Tweet from "../Tweet";
 
@@ -123,16 +123,13 @@ export const PompomPatternPage = () => {
         </Col>
 
         <Col xs={12} className="content mt-4 text-center">
-          <Button
-            variant="primary"
-            className="tryButton"
-            onClick={() =>
-              (window.location.href =
-                "https://amo-yotakenoko.github.io/pompom_pattern_web/")
-            }
+          <a
+            href="https://amo-yotakenoko.github.io/pompom_pattern_web/"
+            className="btn btn-primary tryButton"
+            role="button"
           >
             使ってみる
-          </Button>
+          </a>
         </Col>
       </Row>
     </Container>

@@ -1,12 +1,14 @@
 import os
-from PIL import Image
+from PIL import Image, ImageOps
+from pillow_heif import register_heif_opener
+register_heif_opener()
 
 # --- 設定 ---
 SOURCE_DIR = "./other"
-TARGET_DIR = "./output_webp"
-TARGET_WIDTH = 480   # 最終的なターゲット幅
-TARGET_HEIGHT = 270  # 最終的なターゲット高さ
-SUPPORTED_EXTENSIONS = ['.jpg', '.jpeg', '.jfif', '.png']
+TARGET_DIR = "../public/other"
+TARGET_WIDTH = int(480/2)   # 最終的なターゲット幅
+TARGET_HEIGHT = int(270/2)  # 最終的なターゲット高さ
+SUPPORTED_EXTENSIONS = ['.jpg', '.jpeg', '.jfif', '.png',".HEIC",".heic"]
 # ------------
 
 def resize_and_crop(img, target_width, target_height):
@@ -65,6 +67,7 @@ def convert_images_to_webp_with_crop():
         if file_ext in SUPPORTED_EXTENSIONS and os.path.isfile(file_path):
             try:
                 img = Image.open(file_path)
+                img = ImageOps.exif_transpose(img)
                 
                 # 縦横比を保ち、クリッピングを行うリサイズ処理
                 final_img = resize_and_crop(img, TARGET_WIDTH, TARGET_HEIGHT)

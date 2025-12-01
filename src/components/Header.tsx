@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
 import ScrollingMarquee from "./ScrollingMarquee.tsx";
 import Name from "./Name.tsx";
 function Header() {

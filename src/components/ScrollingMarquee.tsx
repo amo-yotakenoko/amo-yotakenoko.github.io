@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
-import { u } from "framer-motion/client";
+
 function ScrollingMarquee({
   reverse,
   offset,
@@ -38,7 +38,7 @@ function ScrollingMarquee({
 
       setViewImgPassList((prevList) => {
         // a. 先頭要素を削除 (安全な方法)
-        const [first, ...rest] = prevList;
+        const [, ...rest] = prevList;
 
         // b. ランダムな新しい要素のパスを選択 (重複チェックは省略)
         while (rest.length < 10) {
