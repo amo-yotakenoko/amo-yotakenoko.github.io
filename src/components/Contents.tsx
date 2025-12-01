@@ -16,12 +16,28 @@ const applications = [
     src: "/thumbnail/virtualRobot4.jpg",
     alt: "BlenderとScratchを使用する仮想ロボット開発メタバース",
     content: <Application.VirtualRobot4 />,
+
+    explanation: (
+      <>
+        🕹️Scratch Day 2025 in Tokyoで青山大学宮田先生協力のもと展示を行いました
+        <br />
+        🕹️Scratch Conference 2025 Expo Booth展示(オンライン)
+      </>
+    ),
   },
   {
     id: "sotuken",
     src: "/thumbnail/sotuken.jpg",
     alt: "Jetson Orin Nanoを使用した作業台と作業者の動作解析",
     content: <Application.Sotuken />,
+    explanation: (
+      <>
+        <div>🏟️ GOP FAIR 2024展示</div>
+        <div>
+          🏆 第30回 電子情報通信学会東京支部学生会研究発表会 ジュニア奨励賞
+        </div>
+      </>
+    ),
   },
   {
     id: "pompom_pattern",
@@ -29,36 +45,79 @@ const applications = [
     alt: "pompom pattern",
 
     content: <Application.PompomPattern />,
+    explanation: (
+      <>
+        <div className="font-bold">
+          👑 U - 22プログラミングコンテスト 経済産業大臣賞＜総合＞
+        </div>
+        <div>
+          🪢 JimoKidsフェスティバル2025 動物ぽんぽんを作ろうワークショップ
+        </div>
+      </>
+    ),
   },
   {
     id: "3Dbeads",
     src: "/thumbnail/3Dbeads.jpg",
     alt: "3Dbeads模様",
     content: <Application.ThreeDBeadsAbout />,
+
+    explanation: (
+      <>
+        <div>🎲アイロンビーズ用3DCAD</div>
+      </>
+    ),
   },
   {
     id: "colorSeggester",
     src: "/thumbnail/colorSeggester.jpg",
     alt: "colorSeggester",
     content: <Application.ColorSeggester />,
+    explanation: (
+      <>
+        <div>👑 Hack U 都立産技高専 2023 最優秀賞</div>
+      </>
+    ),
   },
   {
     id: "virtualrobot",
     src: "/thumbnail/virtualrobot.jpeg",
     alt: "VirtualRobot",
     content: <Application.VirtualRobot />,
+    explanation: (
+      <>
+        <div>🥉 ゲームクリエイター甲子園 2022 U-18部門 総合賞 佳作</div>
+        <div>🥉 Unity ユースクリエイターカップ 2022 チャレンジ賞</div>
+        <div>💪 コロナ渦でオンラインロボットワークショップを開催</div>
+      </>
+    ),
   },
   {
     id: "pomo-yo",
     src: "/thumbnail/pomo-yo.jpeg",
     alt: "POMPOM模様",
     content: <Application.Pomoyo />,
+    explanation: (
+      <>
+        <div>🏅 WISS 2020 萌芽発表賞</div>
+      </>
+    ),
   },
   {
     id: "amo-yo",
     src: "/thumbnail/amo-yo.jpeg",
     alt: "編模様 イラスト手編み支援アプリ",
     content: <Application.Amoyo />,
+    explanation: (
+      <>
+        <div className="font-bold">
+          💪 2019年度未踏ジュニア採択 スーパークリエータ認定
+        </div>
+        <div>👑 信州未来アプリコンテスト0(ZERO) 長野県知事賞</div>
+        <div>🏅 アプリ甲子園2020 Cygames賞</div>
+        <div>🥉 PCNこどもプロコン2019-2020 ココロエデュケーションラボ賞</div>
+      </>
+    ),
   },
 ];
 
@@ -128,6 +187,15 @@ const models = [
     src: "/thumbnail/shinomorivr.jpeg",
     alt: "VRによる美術鑑賞拡張のケーススタディ",
     content: <Model.ShinomoriVR />,
+    explanation: (
+      <>
+        <div>
+          📃 第28回バーチャルリアリティ学会大会にて論文発表（東京大学大学院
+          情報学環・学際情報学府 特任研究員 倉本大資先生 共著）
+        </div>
+        <div>　- モデリング担当</div>
+      </>
+    ),
   },
   {
     id: "256fes",

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 interface AnimatedGridProps {
-  items: { id: string; src: string; alt: string; content: React.ReactNode }[];
+  items: any[];
   colsClass: string;
   setModalContent: (content: React.ReactNode) => void;
 }
@@ -56,12 +56,12 @@ const AnimatedGrid: React.FC<AnimatedGridProps> = ({
             className="
       absolute bottom-0 w-full text-lg bg-mint rounded-b-xl
       z-0
-
+p-1
        transition-transform duration-300
          group-hover:translate-y-full
     "
           >
-            {item.alt}
+            {item.hasOwnProperty("explanation") ? item.explanation : item.alt}
           </div>
 
           <img
