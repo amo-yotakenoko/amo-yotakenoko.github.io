@@ -20,44 +20,44 @@ const applications = [
   {
     id: "sotuken",
     src: "/thumbnail/sotuken.jpg",
-    alt: "卒研",
+    alt: "Jetson Orin Nanoを使用した作業台と作業者の動作解析",
     content: <Application.Sotuken />,
   },
   {
     id: "pompom_pattern",
     src: "/thumbnail/pompom_pattern.jpg",
-    alt: "ポンポンパターン",
+    alt: "pompom pattern",
 
     content: <Application.PompomPattern />,
   },
   {
     id: "3Dbeads",
     src: "/thumbnail/3Dbeads.jpg",
-    alt: "3Dビーズ",
+    alt: "3Dbeads模様",
     content: <Application.ThreeDBeadsAbout />,
   },
   {
     id: "colorSeggester",
     src: "/thumbnail/colorSeggester.jpg",
-    alt: "カラーセグメンター",
+    alt: "colorSeggester",
     content: <Application.ColorSeggester />,
   },
   {
     id: "virtualrobot",
     src: "/thumbnail/virtualrobot.jpeg",
-    alt: "バーチャルロボット",
+    alt: "VirtualRobot",
     content: <Application.VirtualRobot />,
   },
   {
     id: "pomo-yo",
     src: "/thumbnail/pomo-yo.jpeg",
-    alt: "ポモよ",
+    alt: "POMPOM模様",
     content: <Application.Pomoyo />,
   },
   {
     id: "amo-yo",
     src: "/thumbnail/amo-yo.jpeg",
-    alt: "アモよ",
+    alt: "編模様 イラスト手編み支援アプリ",
     content: <Application.Amoyo />,
   },
 ];
@@ -66,13 +66,13 @@ const models = [
   {
     id: "hirumasika",
     src: "/thumbnail/hirumasika.jpg",
-    alt: "昼間鹿",
+    alt: "比留間歯科医院",
     content: <Model.HirumaShika />,
   },
   {
     id: "motercar",
     src: "/thumbnail/motercar.jpg",
-    alt: "モーターカー",
+    alt: "酒井製作所製 モーターカー",
     content: <Model.MotercarAbout />,
   },
   {
@@ -84,19 +84,19 @@ const models = [
   {
     id: "yasuda",
     src: "/thumbnail/yasuda.jpg",
-    alt: "安田",
+    alt: "昭和初期の交番",
     content: <Model.Yasuda />,
   },
   {
     id: "yohane",
     src: "/thumbnail/yohane.jpg",
-    alt: "ヨハネ",
+    alt: "聖ヨハネ教会堂(明治村)",
     content: <Model.Yohane />,
   },
   {
     id: "horibiru",
     src: "/thumbnail/horibiru.jpg",
-    alt: "ホリビル",
+    alt: "堀ビル",
     content: <Model.Horibiru />,
   },
   {
@@ -108,53 +108,58 @@ const models = [
   {
     id: "256fes2",
     src: "/thumbnail/256fes2.jpeg",
-    alt: "256フェス2",
+    alt: "256fesアバター",
     content: <Model.Fes256Avatar2 />,
   },
   {
     id: "VRCavater",
     src: "/thumbnail/VRCavater.jpg",
-    alt: "VRアバター",
+    alt: "VRChat用アバター",
     content: <Model.VRCavater />,
   },
   {
     id: "256trolly",
     src: "/thumbnail/256trolly.jpeg",
-    alt: "256トロリー",
+    alt: "256fes用大分鉱業上部軌道8t電気機関車とグランビー鉱車",
     content: <Model.Trolly256 />,
   },
   {
     id: "shinomorivr",
     src: "/thumbnail/shinomorivr.jpeg",
-    alt: "篠森VR",
+    alt: "VRによる美術鑑賞拡張のケーススタディ",
     content: <Model.ShinomoriVR />,
   },
   {
     id: "256fes",
     src: "/thumbnail/256fes.jpeg",
-    alt: "256フェス",
+    alt: "256fesアバター",
     content: <Model.Fes256Avatar1 />,
   },
   {
     id: "asio15",
     src: "/thumbnail/asio15.jpeg",
-    alt: "アシオ15",
+    alt: "足尾銅山No47電気機関車",
     content: <Model.Asio15 />,
   },
   {
     id: "asiopapercraft",
     src: "/thumbnail/asiopapercraft.jpeg",
-    alt: "アシオペーパークラフト",
+    alt: "足尾A型のNゲージ用ペーパークラフト",
     content: <Model.Asiopapercraft />,
   },
 ];
 
 const hardwares = [
-  { id: "PC", src: "/thumbnail/PC.jpg", alt: "PC", content: <Hardware.PC /> },
+  {
+    id: "PC",
+    src: "/thumbnail/PC.jpg",
+    alt: "自作PC",
+    content: <Hardware.PC />,
+  },
   {
     id: "tap",
     src: "/thumbnail/tap.jpg",
-    alt: "タップ",
+    alt: "遠隔操作電源タップマシン",
     content: <Hardware.Tap />,
   },
 ];

@@ -38,29 +38,45 @@ const AnimatedGrid: React.FC<AnimatedGridProps> = ({
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
-      {items.map((item) => (
+      {items.map((item, index) => (
         <motion.div
           key={item.id}
-          className="
-         
-          "
-          variants={itemVariants}
+          className="relative group cursor-pointer
+             transition-transform duration-300
+          hover:-translate-y-2
+           shadow-md
+           hover:shadow-xl
+     
+           "
+          style={{ zIndex: items.length - index }}
+          // variants={itemVariants}
           onClick={() => setModalContent(item.content)}
         >
+          <div
+            className="
+      absolute bottom-0 w-full text-lg bg-mint rounded-b-xl
+      z-0
+
+       transition-transform duration-300
+         group-hover:translate-y-full
+    "
+          >
+            {item.alt}
+          </div>
+
           <img
             src={item.src}
             alt={item.alt}
-            className="w-full h-full object-cover   
-             aspect-video
-            overflow-hidden
-            rounded-xl
-            shadow-md
-            transform
-            transition-transform
-            duration-200
-            hover:-translate-y-2
-            hover:shadow-xl
-            cursor-pointer"
+            className="
+      w-full h-full object-cover
+      rounded-t-xl 
+
+      rounded-b-xl group-hover:rounded-b-none duration-300
+
+     
+      z-10 relative
+    pointer-events-none
+    "
           />
         </motion.div>
       ))}
