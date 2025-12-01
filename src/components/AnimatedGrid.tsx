@@ -54,7 +54,7 @@ const AnimatedGrid: React.FC<AnimatedGridProps> = ({
         >
           <div
             className="
-      absolute bottom-0 w-full text-lg bg-mint rounded-b-xl
+      absolute bottom-0 w-full text-lg bg-calm text-ebony rounded-b-xl
       z-0
 p-1
        transition-transform duration-300
