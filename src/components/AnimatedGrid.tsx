@@ -59,6 +59,8 @@ const AnimatedGrid: React.FC<AnimatedGridProps> = ({
 p-1
        transition-transform duration-300
          group-hover:translate-y-full
+         scale-y-0 
+         group-hover:scale-y-100
     "
           >
             {item.hasOwnProperty("explanation") ? item.explanation : item.alt}
