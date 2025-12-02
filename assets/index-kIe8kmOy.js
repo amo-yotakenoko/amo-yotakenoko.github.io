@@ -78,6 +78,8 @@ Error generating stack: `+a.message+`
 p-1\r
        transition-transform duration-300\r
          group-hover:translate-y-full\r
+         scale-y-0 \r
+         group-hover:scale-y-100\r
     `,children:r.hasOwnProperty("explanation")?r.explanation:r.alt}),c.jsx("img",{src:r.src,alt:r.alt,className:`\r
       w-full h-full object-cover\r
       rounded-t-xl \r
