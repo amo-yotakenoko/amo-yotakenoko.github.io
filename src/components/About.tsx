@@ -57,12 +57,15 @@ function About({
   ];
 
   const frameworksAndLibraries = [
+    "Unity",
+    "Ultralytics YOLO",
+    "Matplotlib",
+    "Flask",
     "React",
-    "Three.js",
     "Bootstrap",
+    // "Three.js",
     "Tailwind CSS",
     "Framer Motion",
-    "Flask",
     "Spring",
     "Servlet/JSP",
     "Scratch（MOD作成）",
@@ -71,7 +74,10 @@ function About({
   const others = [
     "Git / GitHub",
     "VSCode / Eclipse",
-    "Unity",
+    "Docker",
+    "Kubernetes",
+    "Ubuntu",
+    "Cisco IOS",
     "Blender ",
     "Arduino",
     "Raspberry Pi",
