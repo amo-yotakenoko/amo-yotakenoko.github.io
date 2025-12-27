@@ -1,5 +1,5 @@
-
 import { Container, Row, Col } from "react-bootstrap";
+import YouTube from "../Youtube";
 
 export const PC = () => {
   const items: [string, number][] = [
@@ -89,6 +89,32 @@ export const Tap = () => {
             style={{ width: "100%" }}
           />
         </Col>
+      </Row>
+    </Container>
+  );
+};
+export const LightTracker = () => {
+  return (
+    <Container id="tapAbout">
+      <Row>
+        <Row className="align-items-center">
+          <Col lg={6} xs={12}>
+            <div className="title">
+              <h1>モーションキャプチャ</h1>
+              <h4>卒論の続き</h4>
+            </div>
+            アドレサブルLEDを3台のウェブカメラで撮影し、位置を推定する。
+            <br />
+            一般的にモーショントラッカーでは発光デバイスとカメラのタイミング同期のための無線通信が必要
+            　→LEDごとに異なる発光パターンを割り当てることで、最大26個のLEDを識別できる。
+          </Col>
+          <Col lg={6} xs={12} className="mt-3">
+            <YouTube
+              videoUrl="https://www.youtube.com/embed/uEnLTTnOIug"
+              autoplay={false}
+            />
+          </Col>
+        </Row>
       </Row>
     </Container>
   );

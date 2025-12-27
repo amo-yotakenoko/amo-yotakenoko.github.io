@@ -230,6 +230,12 @@ const hardwares = [
     alt: "遠隔操作電源タップマシン",
     content: <Hardware.Tap />,
   },
+  {
+    id: "lightTracker",
+    src: "/thumbnail/lightTracker.jpg",
+    alt: "光学式モーキャプ自作(失敗)",
+    content: <Hardware.LightTracker />,
+  },
 ];
 
 const Contents: React.FC<ContentsProps> = ({ setModalContent }) => {
