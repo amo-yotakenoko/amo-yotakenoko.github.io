@@ -216,7 +216,7 @@ export const HirumaShika = () => (
       </div>
       <div className="col-md-12">
         <img
-          src="images/thumbnail/hirumasika.jpg"
+          src="thumbnail/hirumasika.jpg"
           style={{ maxWidth: "100%" }}
           alt="比留間歯科医院"
         />
@@ -285,7 +285,7 @@ export const MotercarAbout = () => (
 
       <div className="col-lg-6 col-12">
         <img
-          src="images/thumbnail/motercar.jpg"
+          src="thumbnail/motercar.jpg"
           style={{ maxWidth: "100%" }}
           alt="酒井製作所製 モーターカー"
         />
@@ -336,7 +336,7 @@ export const Myounitikan = () => (
     <div className="row">
       <div className="col-12">
         <img
-          src="images/thumbnail/myounitikan.jpg"
+          src="thumbnail/myounitikan.jpg"
           id="edoya"
           style={{ maxWidth: "100%" }}
           alt="明日館の正面写真"
@@ -372,7 +372,7 @@ export const Yasuda = () => (
     <div className="row">
       <div className="col-12">
         <img
-          src="images/thumbnail/yasuda.jpg"
+          src="thumbnail/yasuda.jpg"
           style={{ maxWidth: "100%" }}
           alt="昭和初期の交番"
         />
@@ -410,7 +410,7 @@ export const Yohane = () => (
 
       <div className="col-12 d-none d-lg-block">
         <img
-          src="images/thumbnail/yohane.jpg"
+          src="thumbnail/yohane.jpg"
           style={{ maxWidth: "100%" }}
           alt="聖ヨハネ教会堂のサムネイル"
         />
@@ -446,7 +446,7 @@ export const Horibiru = () => (
       </div>
       <div className="col-12 d-none d-lg-block">
         <img
-          src="images/thumbnail/horibiru.jpg"
+          src="thumbnail/horibiru.jpg"
           style={{ maxWidth: "100%" }}
           alt="堀ビルのサムネイル"
         />
@@ -488,7 +488,7 @@ export const Edoya = () => (
       <div className="row">
         <div className="col-12">
           <img
-            src="images/thumbnail/edoya.jpeg"
+            src="thumbnail/edoya.jpeg"
             id="edoya"
             style={{ maxWidth: "100%" }}
             alt="江戸屋サムネイル"
