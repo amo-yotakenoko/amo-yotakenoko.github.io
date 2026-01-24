@@ -124,6 +124,12 @@ const applications = [
 const models = [
   {
     id: "hirumasika",
+    src: "/thumbnail/kameoka.jpg",
+    alt: "旧亀岡家住宅",
+    content: <Model.Kameoka />,
+  },
+  {
+    id: "hirumasika",
     src: "/thumbnail/hirumasika.jpg",
     alt: "比留間歯科医院",
     content: <Model.HirumaShika />,

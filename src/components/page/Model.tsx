@@ -1,4 +1,3 @@
-
 import { Container, Row, Col } from "react-bootstrap";
 
 export const Asiopapercraft = () => (
@@ -221,6 +220,53 @@ export const HirumaShika = () => (
           style={{ maxWidth: "100%" }}
           alt="比留間歯科医院"
         />
+      </div>
+    </div>
+  </Container>
+);
+
+export const Kameoka = () => (
+  <Container className="my-5">
+    <div className="row gy-4">
+      {/* タイトル */}
+      <div className="col-12 text-center">
+        <h1>旧亀岡家住宅</h1>
+        <h4 className="text-muted">福島県 明治37年?</h4>
+      </div>
+
+      {/* メイン画像 */}
+      <div className="col-12 text-center">
+        <img
+          src="images/blender/kameoka.webp"
+          alt="亀岡家住宅"
+          style={{
+            maxWidth: "100%",
+            borderRadius: "12px",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+          }}
+        />
+      </div>
+
+      {/* Shorts動画 */}
+      <div className="col-12 d-flex justify-content-center">
+        <div
+          style={{
+            aspectRatio: "9 / 16",
+            width: "100%",
+            maxWidth: "360px",
+            borderRadius: "12px",
+            overflow: "hidden",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+          }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/zENlSKycfpI"
+            title="YouTube Shorts"
+            style={{ width: "100%", height: "100%", border: 0 }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
       </div>
     </div>
   </Container>
@@ -533,7 +579,8 @@ export const ShinomoriVR = () => (
           ProjectⅠとW8323をblenderで再現しました。
           <br />
           第28回バーチャルリアリティ学会大会で東京大学 大学院情報学環
-          特任研究員の倉本 大資先生と共著の論文においてモデリングを担当しました。
+          特任研究員の倉本
+          大資先生と共著の論文においてモデリングを担当しました。
           <br />
           <a
             href="https://conference.vrsj.org/ac2023/program/doc/3B2-08.pdf"
