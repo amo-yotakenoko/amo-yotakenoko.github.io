@@ -8,7 +8,7 @@ export const PompomPatternPage = () => {
     <Container className="py-5">
       <Row>
         <Col xs={12} className="title text-center">
-          <Image src="/images/pompom_pattern/pompom_icon_wide.png" fluid />
+          <Image src="/images/pompom_pattern/pompom_icon_wide.png" fluid className="rounded-lg" />
         </Col>
 
         <Col xs={12} className="content">
@@ -58,7 +58,7 @@ export const PompomPatternPage = () => {
             毛糸と百均等でも売っている専用の器具や厚紙などを使って作ることができます
           </p>
           <div style={{ textAlign: "center" }}>
-            <Image src="/images/pompom_pattern/展開.gif" style={{ width: "80%" }} fluid />
+            <Image src="/images/pompom_pattern/展開.gif" style={{ width: "80%" }} fluid className="rounded-lg" />
             <div>ぽんぽんの構造のイメージ</div>
           </div>
           <p className="mt-3">
@@ -69,7 +69,7 @@ export const PompomPatternPage = () => {
           <h2>編集画面</h2>
           <p>編集画面では3Dのぽんぽんに色を塗っていきます。</p>
           <div style={{ textAlign: "center" }}>
-            <Image src="/images/pompom_pattern/edit.jpg" style={{ width: "80%" }} fluid />
+            <Image src="/images/pompom_pattern/edit.jpg" style={{ width: "80%" }} fluid className="rounded-lg" />
             <div>編集画面</div>
           </div>
 
@@ -78,7 +78,7 @@ export const PompomPatternPage = () => {
             設計図画面どの色を何回何段巻くかが表示されます。巻いたところをタップすることで済のマークが表示されます。また左上に残りの合計巻き数、現在の進捗率が表示されます。
           </p>
           <div style={{ textAlign: "center" }}>
-            <Image src="/images/pompom_pattern/設計図.png" style={{ width: "50%" }} fluid />
+            <Image src="/images/pompom_pattern/設計図.png" style={{ width: "50%" }} fluid className="rounded-lg" />
             <div>設計図</div>
           </div>
 
@@ -88,7 +88,7 @@ export const PompomPatternPage = () => {
             ボタンから読み込んで編集することが可能です。その為各種SNS等で画像として巻き図の画像を装飾の仕方と共に共有することができます
           </p>
           <div style={{ textAlign: "center" }}>
-            <Image src="/images/pompom_pattern/共有.png" style={{ width: "80%" }} fluid />
+            <Image src="/images/pompom_pattern/共有.png" style={{ width: "80%" }} fluid className="rounded-lg" />
             <div>設計図のエクスポート</div>
           </div>
 
@@ -97,8 +97,8 @@ export const PompomPatternPage = () => {
             ぽんぽんの緯度にあたる角度を等間隔にした場合曲に近い毛糸の面積が小さくなってしまう為,表面積が均一になるように調整しました
           </p>
           <div style={{ textAlign: "center" }}>
-            <Image src="/images/pompom_pattern/面積.png" style={{ width: "80%" }} fluid />
-            <Image src="/images/pompom_pattern/面積2.png" style={{ width: "80%" }} fluid />
+            <Image src="/images/pompom_pattern/面積.png" style={{ width: "80%" }} fluid className="rounded-lg" />
+            <Image src="/images/pompom_pattern/面積2.png" style={{ width: "80%" }} fluid className="rounded-lg" />
             <div>毛糸の等表面積化</div>
           </div>
 
@@ -117,7 +117,7 @@ export const PompomPatternPage = () => {
           <h2>最後に</h2>
           <p>本アプリによって毛糸ぽんぽんを使った手芸の自由度が広がれば良いなと思っています</p>
           <div style={{ textAlign: "center" }}>
-            <Image src="/images/pompom_pattern/最後に.png" style={{ width: "80%" }} fluid />
+            <Image src="/images/pompom_pattern/最後に.png" style={{ width: "80%" }} fluid className="rounded-lg" />
             <div>完成したぽんぽんたち</div>
           </div>
         </Col>

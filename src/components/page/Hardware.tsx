@@ -86,6 +86,7 @@ export const Tap = () => {
           <img
             src="images/hardware/tap.gif"
             alt="遠隔操作電源タップマシン"
+            className="rounded-lg"
             style={{ width: "100%" }}
           />
         </Col>

@@ -85,7 +85,7 @@ export const Sotuken = () => {
               <img
                 src="/images/sotuken/jetoson.jpg"
                 alt="Jetson Orin Nano"
-                className="img-fluid rounded"
+                className="img-fluid rounded-lg"
               />
             </Col>
           </Row>
@@ -106,7 +106,7 @@ export const Sotuken = () => {
               <img
                 src="/images/sotuken/yolo.png"
                 alt="YOLOでの人の認識"
-                className="img-fluid rounded"
+                className="img-fluid rounded-lg"
               />
             </Col>
           </Row>
@@ -126,7 +126,7 @@ export const Sotuken = () => {
           <img
             src="/images/sotuken/ar.jpg"
             alt="ARマーカーによる自動アノテーション"
-            className="img-fluid rounded"
+            className="img-fluid rounded-lg"
             style={{ maxHeight: "400px", margin: "0 auto", display: "block" }}
           />
         </Col>
@@ -166,7 +166,7 @@ export const Sotuken = () => {
             <img
               src="/images/sotuken/normal.webp"
               alt="(a)枠を持った時の動作"
-              className="img-fluid rounded"
+              className="img-fluid rounded-lg"
               loading="lazy"
             />
             <div className="mt-2">(a)枠を持った時の動作</div>
@@ -177,7 +177,7 @@ export const Sotuken = () => {
             <img
               src="/images/sotuken/denger.webp"
               alt="(b)枠を掴まず荷物を持った際の動作"
-              className="img-fluid rounded"
+              className="img-fluid rounded-lg"
               loading="lazy"
             />
             <div className="mt-2">(b)枠を掴まず荷物を持った際の動作</div>
@@ -359,12 +359,7 @@ export const Pomoyo = () => {
 
           <Col md={6}>
             <video
-              className="w-100"
-              autoPlay
-              loop
-              muted
-              playsInline
-              style={{ borderRadius: "12px" }}
+              className="w-100 rounded-lg"
             >
               <source
                 src="/images/pomo_yo_description/pomo-yo.mp4"
@@ -523,8 +518,7 @@ export const ColorSeggester = () => {
               alt="QRコード"
               width={120}
               fluid
-              rounded
-            />
+                                className="rounded-lg"            />
           </Col>
         </Row>
       </Row>
@@ -582,14 +576,14 @@ export const PompomPattern = () => {
           <img
             src="/images/pompom_pattern/workshop1.jpg"
             alt="ワークショップの様子"
-            className="img-fluid rounded"
+            className="img-fluid rounded-lg"
           />
         </Col>
         <Col lg={6} xs={12}>
           <img
             src="/images/pompom_pattern/workshop2.jpg"
             alt="ワークショップの様子"
-            className="img-fluid rounded"
+            className="img-fluid rounded-lg"
           />
         </Col>
       </Row>
@@ -612,7 +606,7 @@ export const PompomPattern = () => {
           <div style={{ textAlign: "center" }}>
             <Image
               src="/images/pompom_pattern/展開.gif"
-              className="img-fluid rounded"
+              className="img-fluid rounded-lg"
             />
             <div>ぽんぽんの構造のイメージ</div>
           </div>
@@ -629,7 +623,7 @@ export const PompomPattern = () => {
           <div style={{ textAlign: "center" }}>
             <Image
               src="/images/pompom_pattern/edit.jpg"
-              className="img-fluid rounded"
+              className="img-fluid rounded-lg"
             />
             <div>編集画面</div>
           </div>
@@ -648,7 +642,7 @@ export const PompomPattern = () => {
           <div style={{ textAlign: "center" }}>
             <Image
               src="/images/pompom_pattern/設計図.png"
-              className="img-fluid rounded"
+              className="img-fluid rounded-lg"
               style={{ maxWidth: "50%" }}
             />
             <div>設計図</div>
@@ -669,7 +663,7 @@ export const PompomPattern = () => {
           <div style={{ textAlign: "center" }}>
             <Image
               src="/images/pompom_pattern/共有.png"
-              className="img-fluid rounded"
+              className="img-fluid rounded-lg"
             />
             <div>設計図のエクスポート</div>
           </div>
@@ -687,7 +681,7 @@ export const PompomPattern = () => {
         <Col md={6}>
           <Image
             src="/images/pompom_pattern/面積.png"
-            className="img-fluid rounded"
+            className="img-fluid rounded-lg"
           />
           <Image
             src="/images/pompom_pattern/面積2.png"
@@ -750,7 +744,7 @@ export const PompomPattern = () => {
           <div style={{ textAlign: "center" }}>
             <Image
               src="/images/pompom_pattern/最後に.png"
-              className="img-fluid rounded"
+              className="img-fluid rounded-lg"
             />
             <div>完成したぽんぽんたち</div>
           </div>
