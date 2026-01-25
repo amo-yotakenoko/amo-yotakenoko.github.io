@@ -19,25 +19,25 @@ export const Asiopapercraft = () => (
           <div className="col-lg-6 col-12">
             <img
               src="images/blender/asiomotoneta2.jpeg"
-              style={{ maxWidth: "100%" }} className="rounded-lg"
+              className="rounded-lg w-full"
             />
             <p>1.元ネタ</p>
           </div>
           <div className="col-lg-6 col-12">
             <img
               src="images/blender/asiomodel.jpeg"
-              style={{ maxWidth: "100%" }} className="rounded-lg"
+              className="rounded-lg w-full"
             />
             <p>2.モデリング</p>
           </div>
           <div className="col-lg-6 col-12">
-            <img src="images/blender/paper.jpeg" style={{ maxWidth: "100%" }} className="rounded-lg" />
+            <img src="images/blender/paper.jpeg" className="rounded-lg w-full" />
             <p>3.印刷(予備含め3台分)</p>
           </div>
           <div className="col-lg-6 col-12">
             <img
               src="images/blender/papermodel.jpeg"
-              style={{ maxWidth: "100%" }} className="rounded-lg"
+              className="rounded-lg w-full"
             />
             <p>4.組み立て</p>
           </div>
@@ -71,10 +71,12 @@ export const Trolly256 = () => (
         </div>
       </div>
       <div className="col-md-7">
-        <video controls autoPlay muted className="video rounded-lg">
-          <source src="images/blender/256trolly.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div className="embed-responsive embed-responsive-16by9">
+          <video controls autoPlay muted className="video rounded-lg embed-responsive-item">
+            <source src="images/blender/256trolly.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
   </Container>
@@ -94,7 +96,7 @@ export const Fes256Avatar1 = () => (
         で作ったアバターです
         <img
           src="images/blender/256fesvrc.jpeg"
-          style={{ maxWidth: "100%", height: "auto" }} className="rounded-lg"
+          className="rounded-lg w-full h-auto"
         />
       </div>
       <div className="col-md-7">
@@ -160,7 +162,7 @@ export const SkyMosaic = () => (
       <div className="col-lg-6 col-12">
         <img
           src="images/blender/asiomovie.gif"
-          style={{ maxWidth: "100%", height: "auto" }} className="rounded-lg"
+          className="rounded-lg w-full h-auto"
         />
       </div>
     </div>
@@ -217,7 +219,7 @@ export const HirumaShika = () => (
       <div className="col-md-12">
         <img
           src="thumbnail/hirumasika.jpg"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="比留間歯科医院"
         />
       </div>
@@ -239,11 +241,7 @@ export const Kameoka = () => (
         <img
           src="images/blender/kameoka.webp"
           alt="亀岡家住宅"
-          className="rounded-lg shadow-md"
-                      style={{
-                        maxWidth: "100%",
-                        boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-                      }}        />
+          className="rounded-lg shadow-md w-full"        />
       </div>
 
       {/* Shorts動画 */}
@@ -284,21 +282,21 @@ export const MotercarAbout = () => (
       <div className="col-lg-6 col-12">
         <img
           src="thumbnail/motercar.jpg"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="酒井製作所製 モーターカー"
         />
       </div>
       <div className="col-lg-6 col-12">
         <img
           src="images/blender/moter_rear.png"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="モーターカー後部"
         />
       </div>
       <div className="col-lg-6 col-12">
         <img
           src="images/blender/motercarTexture.jpg"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="モーターカー テクスチャ"
         />
         <p>No.20は本物の写真をテクスチャとして貼り付けています。</p>
@@ -336,14 +334,14 @@ export const Myounitikan = () => (
         <img
           src="thumbnail/myounitikan.jpg"
           id="edoya"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="明日館の正面写真"
         />
       </div>
       <div className="col-lg-6 col-12">
         <img
           src="images/blender/myounitikan1.jpg"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="明日館モデリング写真"
         />
         <p>
@@ -371,7 +369,7 @@ export const Yasuda = () => (
       <div className="col-12">
         <img
           src="thumbnail/yasuda.jpg"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="昭和初期の交番"
         />
         <p>瓦にメッシュを割きすぎているので改善点です</p>
@@ -379,7 +377,7 @@ export const Yasuda = () => (
       <div className="col-lg-6 col-12">
         <img
           src="images/blender/yasudawire.jpg"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="交番のワイヤーフレーム"
         />
         <p>瓦にメッシュを割きすぎているので改善点です</p>
@@ -387,7 +385,7 @@ export const Yasuda = () => (
       <div className="col-lg-6 col-12">
         <img
           src="images/blender/yasudatexture.jpg"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="交番のテクスチャ"
         />
         <p>テクスチャを使ってペンキを剝がしたりしてます</p>
@@ -409,7 +407,7 @@ export const Yohane = () => (
       <div className="col-12 d-none d-lg-block">
         <img
           src="thumbnail/yohane.jpg"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="聖ヨハネ教会堂のサムネイル"
         />
       </div>
@@ -417,14 +415,14 @@ export const Yohane = () => (
       <div className="col-lg-6 col-12">
         <img
           src="images/blender/yohane.gif"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="聖ヨハネ教会堂のGIF"
         />
       </div>
       <div className="col-lg-6 col-12">
         <img
           src="images/blender/grass.gif"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="草のGIF"
         />
       </div>
@@ -445,14 +443,14 @@ export const Horibiru = () => (
       <div className="col-12 d-none d-lg-block">
         <img
           src="thumbnail/horibiru.jpg"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="堀ビルのサムネイル"
         />
       </div>
       <div className="col-lg-6 col-12">
         <img
           src="images/blender/horibiru.png"
-          style={{ maxWidth: "100%" }} className="rounded-lg"
+          className="rounded-lg w-full"
           alt="堀ビルの画像"
         />
       </div>
@@ -488,7 +486,7 @@ export const Edoya = () => (
           <img
             src="thumbnail/edoya.jpeg"
             id="edoya"
-            style={{ maxWidth: "100%" }} className="rounded-lg"
+            className="rounded-lg w-full"
             alt="江戸屋サムネイル"
           />
         </div>
@@ -496,7 +494,7 @@ export const Edoya = () => (
         <div className="col-7">
           <img
             src="images/blender/edoyawire.png"
-            style={{ maxWidth: "100%" }} className="rounded-lg"
+            className="rounded-lg w-full"
             alt="江戸屋ワイヤーフレーム"
           />
         </div>
@@ -504,15 +502,14 @@ export const Edoya = () => (
         <div className="col-5">
           <img
             src="images/blender/edoya_curtain.png"
-            style={{ maxWidth: "100%" }} className="rounded-lg"
+            className="rounded-lg w-full"
             alt="江戸屋カーテン画像"
           />
           <video
             controls
             autoPlay
             muted
-            className="video rounded-lg"
-            style={{ maxWidth: "100%" }} className="rounded-lg"
+            className="video rounded-lg w-full"
           >
             <source src="images/blender/edoya_curtain.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -556,7 +553,7 @@ export const Asio15 = () => (
       <div className="col-lg-6 col-12">
         <img
           src="images/blender/asiomovie.gif"
-          style={{ maxWidth: "100%", height: "auto" }} className="rounded-lg"
+          className="rounded-lg w-full h-auto"
           alt="足尾銅山 No47 電気機関車 動画"
         />
       </div>
@@ -622,7 +619,7 @@ export const VRCavater = () => (
           <div className="col-lg-6 col-12">
             <img
               src="images/blender/hairnode.jpg"
-              style={{ maxWidth: "100%" }} className="rounded-lg"
+              className="rounded-lg w-full"
               alt="髪の毛のシェーダーノード"
             />
             <p>髪の毛はシェーダーノードで書いてます</p>

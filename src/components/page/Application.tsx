@@ -435,6 +435,7 @@ export const Amoyo = () => {
           <img
             src="images/siba.jpg"
             alt="編模様イメージ"
+            className="rounded-lg"
             style={{ maxWidth: "100%" }}
           />
         </Col>
@@ -783,6 +784,7 @@ export const VirtualRobot4 = () => {
           <img
             src="/images/virtualrobot/composition.jpg"
             alt="構成図"
+            className="rounded-lg"
             style={{
               mixBlendMode: "multiply",
               width: "100%",
