@@ -11,7 +11,12 @@ function ScrollingMarquee({
   const [imgPassList, setImgPassList] = useState([]);
   const [viewImgPassList, setViewImgPassList] = useState([]);
 
-  const unit_x = 320 + 16; // 画像の幅 (w-80) + margin (space-x-4)
+  const unit_x =
+    window.innerWidth < 640
+      ? 192 + 16
+      : window.innerWidth < 768
+        ? 256 + 16
+        : 320 + 16;
 
   const inital_x = reverse ? -unit_x + offset * unit_x : 0 + offset * unit_x;
   const end_x = reverse ? 0 + offset * unit_x : -unit_x + offset * unit_x;
