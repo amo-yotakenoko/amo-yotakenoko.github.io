@@ -217,17 +217,10 @@ export const ThreeDBeadsAbout = () => {
             </p>
           </Col>
           <Col lg={6} xs={12}>
-            {/* <video
-              className="embed-responsive-item video"
-              autoPlay
-              loop
-              muted
-              playsInline
-              style={{ width: "100%" }}
-            >
-              <source src="/images/3Dbeads.mp4" type="video/mp4" />
+            <video controls autoPlay muted loop className="w-full rounded-lg h-auto">
+              <source src="/images/3Dbeads.webm" type="video/webm" />
               Your browser does not support the video tag.
-            </video> */}
+            </video>
             <Tweet url="https://twitter.com/takenok58914745/status/1609202791494606849" />
           </Col>
         </Row>
@@ -357,17 +350,17 @@ export const Pomoyo = () => {
             </strong>
           </Col>
 
-          <Col md={6}>
-            <video
-              className="w-100 rounded-lg"
-            >
-              <source
-                src="/images/pomo_yo_description/pomo-yo.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </Col>
+                                        <Col md={6}>
+
+                                          <video controls autoPlay muted loop className="w-full rounded-lg h-auto">
+
+                                            <source src="/images/pomo_yo_description/pomo-yo.webm" type="video/webm" />
+
+                                            Your browser does not support the video tag.
+
+                                          </video>
+
+                                        </Col>
         </Row>
 
         {/* <div className="mt-4 text-center">

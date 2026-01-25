@@ -71,12 +71,10 @@ export const Trolly256 = () => (
         </div>
       </div>
       <div className="col-md-7">
-        <div className="embed-responsive embed-responsive-16by9">
-          <video controls autoPlay muted className="video rounded-lg embed-responsive-item">
-            <source src="images/blender/256trolly.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <video controls autoPlay muted loop className="rounded-lg w-full h-auto">
+          <source src="images/blender/256trolly.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </Container>
@@ -100,8 +98,8 @@ export const Fes256Avatar1 = () => (
         />
       </div>
       <div className="col-md-7">
-        <video className="embed-responsive-item video" autoPlay loop muted>
-          <source src="images/blender/256fes2023.mp4" type="video/mp4" />
+        <video controls autoPlay muted loop className="rounded-lg w-full h-auto">
+          <source src="images/blender/256fes2023.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -123,8 +121,8 @@ export const Fes256Avatar2 = () => (
         で作ったアバターです
       </div>
       <div className="col-md-7">
-        <video className="embed-responsive-item video" autoPlay loop muted>
-          <source src="images/blender/256fes2.mp4" type="video/mp4" />
+        <video controls autoPlay muted loop className="rounded-lg w-full h-auto">
+          <source src="images/blender/256fes2.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -505,13 +503,8 @@ export const Edoya = () => (
             className="rounded-lg w-full"
             alt="江戸屋カーテン画像"
           />
-          <video
-            controls
-            autoPlay
-            muted
-            className="video rounded-lg w-full"
-          >
-            <source src="images/blender/edoya_curtain.mp4" type="video/mp4" />
+          <video controls autoPlay muted loop className="rounded-lg w-full h-auto">
+            <source src="images/blender/edoya_curtain.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
           <p>カーテンはクロスシミュレーションで作ってます</p>
