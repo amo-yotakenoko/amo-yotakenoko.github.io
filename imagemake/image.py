@@ -76,7 +76,7 @@ def convert_images_to_webp_with_crop():
                 output_filename = f"{i}.webp"
                 output_path = os.path.join(TARGET_DIR, output_filename)
                 
-                final_img.save(output_path, 'webp', quality=50)
+                final_img.save(output_path, 'webp', quality=30)
                 
                 print(f"✅ 変換成功: {filename} -> {output_filename}")
                 processed_count += 1
