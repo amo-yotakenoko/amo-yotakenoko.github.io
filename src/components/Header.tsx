@@ -5,9 +5,9 @@ function Header() {
     <>
       <div className="relative w-full">
         <div>
-          <ScrollingMarquee reverse={false} offset={0} />
-          <ScrollingMarquee reverse={true} offset={-0.5} />
-          <ScrollingMarquee reverse={false} offset={0} />
+                  <ScrollingMarquee reverse={false} offset={0} timeoffset={0} />
+          <ScrollingMarquee reverse={true} offset={-0.5} timeoffset={ 0.2}/>
+          <ScrollingMarquee reverse={false} offset={0} timeoffset={ 0.4} />
         </div>
 
         <div className="absolute inset-0 flex items-center justify-center">
