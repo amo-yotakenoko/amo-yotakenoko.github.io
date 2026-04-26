@@ -298,6 +298,17 @@ export const VirtualRobot = () => {
         </Col>
       </Row>
 
+      {/* DojoCon紹介 */}
+      <Row className="mt-4">
+        <Col lg={6} xs={12}>
+          <p>DojoCon Japan 2021でテストプレイしていただきました。</p>
+          <div className="day">2021/12/29</div>
+        </Col>
+        <Col lg={6} xs={12}>
+          <Tweet url="https://twitter.com/DojoConJapan/status/1476117923031044106" />
+        </Col>
+      </Row>
+
       <Row className="mt-5">
         <Col xs={12} className="text-center d-flex gap-2">
           <a
